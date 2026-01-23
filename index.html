@@ -1,251 +1,48 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VS Transporte | Pasajeros</title>
-  <meta name="description" content="Servicio profesional de transporte de pasajeros. Viajes seguros, cómodos y puntuales." />  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <style>
-    :root {
-      --primary: #0f172a;
-      --secondary: #1e293b;
-      --accent: #0ea5e9;
-      --text: #f8fafc;
-      --gray: #cbd5e1;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  <title>Traslados en Asunción | Transporte de Pasajeros en Paraguay | Asunción Transfers</title>
 
+  <meta name="description" content="Traslados en Asunción, Paraguay y viajes internacionales. Transporte de pasajeros al aeropuerto, hoteles, empresas y grupos. Servicio premium, seguro y confiable.">
+
+  <style>
     body {
-      background-color: var(--primary);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #020617;
+      color: #e5e7eb;
+    }
+
+    h1, h2, h3 {
+      color: #f8fafc;
+      margin-top: 0;
     }
 
     header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
+      background:
+        linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.75)),
+        url('hero.jpg') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
     }
 
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .nav a:hover {
-      color: var(--accent);
+    header p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 15px auto;
+      color: #cbd5f5;
     }
 
     section {
-      padding: 100px 20px;
-      max-width: 1200px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1542362567-b07e54358753') center/cover no-repeat;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--gray);
     }
 
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: var(--accent);
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: var(--secondary);
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 30px 20px;
-      color: var(--gray);
-    }
-
-    /* WhatsApp Button */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 18px;
-      border-radius: 50%;
-      font-size: 24px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-      z-index: 2000;
-    }
-  </style></head>
-<body><header>
-  <nav class="nav">
-    <div class="logo">Asunción Transfers</div>
-    <ul>
-      <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
-      <li><a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a></li>
-      <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
-      <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
-    </ul>
-    <div style="margin-left:20px;">
-      <a href="#" onclick="setLang('es')">ES</a> | <a href="#" onclick="setLang('en')">EN</a>
-    </div>
-  </nav>
-</header><section class="hero" id="inicio">
-  <div>
-    <h1 data-es="Asunción Transfers – Transporte de Pasajeros Premium" data-en="Asunción Transfers – Premium Passenger Transportation">Asunción Transfers – Transporte de Pasajeros Premium</h1>
-    <p data-es="Servicio profesional de transporte de pasajeros en Asunción, Gran Asunción y Paraguay. Traslados al aeropuerto, viajes nacionales e internacionales con vehículos desde 1 hasta 60+ pasajeros." data-en="Professional passenger transportation service in Asunción, Greater Asunción and Paraguay. Airport transfers, national and international trips with vehicles from 1 to 60+ passengers."></p>
-    <a href="#contacto" class="btn" data-es="Solicitar Cotización" data-en="Request a Quote">Solicitar Cotización</a>
-  </div>
-</section><section id="destinos">
-  <h2 data-es="Destinos Frecuentes" data-en="Popular Destinations">Destinos Frecuentes</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 data-es="Aeropuerto Silvio Pettirossi" data-en="Silvio Pettirossi Airport">Aeropuerto Silvio Pettirossi</h3>
-      <p data-es="Traslados desde y hacia el aeropuerto, 24/7." data-en="24/7 transfers to and from the airport."></p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">Reservar</a>
-    </div>
-    <div class="card">
-      <h3 data-es="Asunción y Gran Asunción" data-en="Asunción & Greater Area">Asunción y Gran Asunción</h3>
-      <p data-es="Movilidad urbana para empresas y particulares." data-en="Urban mobility for companies and individuals."></p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">Reservar</a>
-    </div>
-    <div class="card">
-      <h3 data-es="Encarnación" data-en="Encarnación">Encarnación</h3>
-      <p data-es="Viajes cómodos y seguros a Encarnación." data-en="Comfortable and safe trips to Encarnación."></p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">Reservar</a>
-    </div>
-    <div class="card">
-      <h3 data-es="Ciudad del Este" data-en="Ciudad del Este">Ciudad del Este</h3>
-      <p data-es="Traslados nacionales y corporativos." data-en="National and corporate transfers."></p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">Reservar</a>
-    </div>
-    <div class="card">
-      <h3 data-es="Buenos Aires (AR)" data-en="Buenos Aires (AR)">Buenos Aires (AR)</h3>
-      <p data-es="Viajes internacionales a Argentina." data-en="International trips to Argentina."></p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">Reservar</a>
-    </div>
-    <div class="card">
-      <h3 data-es="Foz do Iguaçu (BR)" data-en="Foz do Iguaçu (BR)">Foz do Iguaçu (BR)</h3>
-      <p data-es="Traslados a Brasil para turismo y eventos." data-en="Transfers to Brazil for tourism and events."></p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">Reservar</a>
-    </div>
-  </div>
-</section><section id="servicios">
-  <h2 data-es="Catálogo de Servicios y Móviles" data-en="Services & Fleet">Catálogo de Servicios y Móviles</h2>
-  <div class="grid"><div class="card">
-  <div class="card">
-  <h3 data-es="Sedán / Ejecutivo (1–3 pasajeros)" data-en="Sedan / Executive (1–3 passengers)">Sedán / Ejecutivo (1–3 pasajeros)</h3>
-  <p data-es="Desde Gs. 120.000 • Traslados privados, aeropuerto y servicio ejecutivo." data-en="From Gs. 120,000 • Private transfers, airport and executive service."></p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-  <div class="card">
-  <h3 data-es="SUV / Minivan (4–7 pasajeros)" data-en="SUV / Minivan (4–7 passengers)">SUV / Minivan (4–7 pasajeros)</h3>
-  <p data-es="Desde Gs. 180.000 • Ideal para familias y grupos pequeños." data-en="From Gs. 180,000 • Ideal for families and small groups."></p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-  <div class="card">
-  <h3 data-es="Minibús (8–15 pasajeros)" data-en="Minibus (8–15 passengers)">Minibús (8–15 pasajeros)</h3>
-  <p data-es="Desde Gs. 350.000 • Turismo, eventos y grupos." data-en="From Gs. 350,000 • Tourism, events and groups."></p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-  <div class="card">
-  <h3 data-es="Bus Mediano (20–30 pasajeros)" data-en="Mid-size Bus (20–30 passengers)">Bus Mediano (20–30 pasajeros)</h3>
-  <p data-es="Desde Gs. 750.000 • Empresas, eventos y viajes largos." data-en="From Gs. 750,000 • Companies, events and long-distance travel."></p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-  <div class="card">
-  <h3 data-es="Bus Grande (40–60+ pasajeros)" data-en="Large Bus (40–60+ passengers)">Bus Grande (40–60+ pasajeros)</h3>
-  <p data-es="Desde Gs. 1.200.000 • Grandes eventos y delegaciones." data-en="From Gs. 1,200,000 • Large events and delegations."></p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
-</div>
-
-  </div>
-</section><section id="nosotros">
-  <h2 data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</h2>
-  <p data-es="En Asunción Transfers ofrecemos transporte de pasajeros seguro, cómodo y puntual. Contamos con una amplia flota de vehículos que va desde servicios ejecutivos hasta buses para grandes grupos. Trabajamos con empresas, hoteles, turistas y eventos especiales en Paraguay y países vecinos." data-en="At Asunción Transfers we provide safe, comfortable and punctual passenger transportation. We offer a wide fleet ranging from executive vehicles to large buses. We work with companies, hotels, tourists and special events in Paraguay and neighboring countries."></p>
-</section><section id="contacto">
-  <h2>Contacto</h2>
-  <p>Reservá tu viaje o consultá disponibilidad directamente por WhatsApp.</p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Contactar por WhatsApp</a>
-</section><footer>
-  <p>© 2026 Asunción Transfers | Transporte de Pasajeros en Asunción, Paraguay</p>
-</footer><a class="whatsapp" href="https://wa.me/595991809877" target="_blank">💬</a>
-
-<script>
-  let currentLang = 'es';
-  function setLang(lang) {
-    currentLang = lang;
-    document.querySelectorAll('[data-es]').forEach(el => {
-      el.textContent = el.getAttribute('data-' + lang);
-    });
-  }
-</script></body>
-</html>
+      margin-top:
+    
