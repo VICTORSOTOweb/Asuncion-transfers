@@ -2,77 +2,189 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Asunción Transfers | Transporte Premium de Pasajeros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Traslados en Asunción | Transporte de Pasajeros en Paraguay</title>
+  <!-- SEO -->
+  <meta name="description" content="Asunción Transfers - Traslados premium en Asunción, Paraguay y viajes internacionales. Transporte privado, seguro y profesional.">
+  <meta name="keywords" content="Asunción Transfers, transporte premium, traslados Paraguay, transfer aeropuerto, viajes internacionales">
 
-  <meta name="description" content="Traslados en Asunción y Paraguay. Transporte de pasajeros al aeropuerto, hoteles, empresas y viajes internacionales. Servicio seguro y profesional.">
-
+  <!-- Estilos -->
   <style>
-    body {
+    :root {
+      --primary: #00c3ff;
+      --dark: #0b0f14;
+      --dark2: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --whatsapp: #25D366;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #020617;
-      color: #e5e7eb;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    h1, h2, h3 {
-      color: #f8fafc;
-      margin-top: 0;
+    body {
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
     header {
-      background:
-        linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.75)),
-        url('hero.jpg') center/cover no-repeat;
-      padding: 100px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(11,15,20,0.9);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .menu a {
+      margin-left: 20px;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+                  url("img/hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 0 20px;
     }
 
-    header p {
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
       font-size: 18px;
+      color: var(--muted);
       max-width: 700px;
-      margin: 15px auto;
-      color: #cbd5f5;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
       margin: auto;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 26px;
-      background-color: #22c55e;
-      color: #020617;
-      text-decoration: none;
+      margin-top: 25px;
+      padding: 14px 30px;
       border-radius: 30px;
       font-weight: bold;
+      background: var(--whatsapp);
+      color: #000;
     }
 
+    /* SECTIONS */
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    /* SERVICES */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
-      margin-top: 30px;
     }
 
     .card {
-      background-color: #020617;
-      border-radius: 16px;
+      background: var(--dark2);
       padding: 25px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      border-radius: 14px;
+      text-align: center;
     }
 
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CATALOGO */
+    .catalogo .card a {
+      margin-top: 15px;
+      display: inline-block;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* FOOTER */
     footer {
-      background-color: #020617;
+      background: #020617;
+      padding: 30px 20px;
       text-align: center;
-      padding: 30px;
+      color: var(--muted);
       font-size: 14px;
-      color: #9ca3af;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--whatsapp);
+      color: #000;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 22px;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
@@ -80,72 +192,113 @@
 <body>
 
 <header>
-  <h1>Asunción Transfers</h1>
-  <p>Traslados premium en Asunción, Paraguay y viajes internacionales</p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+  <div class="nav">
+    <div class="logo">Asunción Transfers</div>
+    <div class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
 </header>
 
-<section>
-  <h2>Transporte de Pasajeros</h2>
-  <p>
-    Brindamos servicios de transporte privado y profesional en Asunción y todo Paraguay.
-    Traslados al aeropuerto, hoteles, empresas, eventos y viajes internacionales.
-  </p>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div>
+    <h1>Asunción Transfers</h1>
+    <p>Traslados premium en Asunción, todo Paraguay y viajes internacionales. Transporte privado, seguro y profesional.</p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+  </div>
 </section>
 
-<section>
-  <h2>Servicios</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Traslados Urbanos</h3>
-      <p>Asunción y alrededores, hoteles y aeropuerto.</p>
-    </div>
-    <div class="card">
-      <h3>Viajes Nacionales</h3>
-      <p>Traslados a cualquier ciudad del Paraguay.</p>
-    </div>
-    <div class="card">
-      <h3>Viajes Internacionales</h3>
-      <p>Argentina, Brasil y países vecinos.</p>
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="container">
+    <h2>Servicios</h2>
+    <p class="subtitle">Soluciones de transporte adaptadas a cada necesidad</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Traslados Urbanos</h3>
+        <p>Asunción y alrededores con puntualidad y confort.</p>
+      </div>
+      <div class="card">
+        <h3>Aeropuerto & Hoteles</h3>
+        <p>Recepción personalizada y viajes ejecutivos.</p>
+      </div>
+      <div class="card">
+        <h3>Viajes Internacionales</h3>
+        <p>Argentina, Brasil y otros destinos de larga distancia.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Flota de Vehículos</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1 a 3 pasajeros</h3>
-      <p>Servicio ejecutivo.</p>
-    </div>
-    <div class="card">
-      <h3>4 a 7 pasajeros</h3>
-      <p>Familias y grupos pequeños.</p>
-    </div>
-    <div class="card">
-      <h3>8 a 15 pasajeros</h3>
-      <p>Turismo y eventos.</p>
-    </div>
-    <div class="card">
-      <h3>16 a 30 pasajeros</h3>
-      <p>Empresas y excursiones.</p>
-    </div>
-    <div class="card">
-      <h3>31 a 60+ pasajeros</h3>
-      <p>Grandes grupos.</p>
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="container">
+    <h2>Quiénes Somos</h2>
+    <p class="subtitle">
+      <strong>Asunción Transfers</strong> es una empresa de transporte de pasajeros especializada en
+      <strong>traslados premium</strong> en Asunción, todo Paraguay y viajes internacionales.
+      <br><br>
+      Ofrecemos un servicio <strong>privado, seguro y puntual</strong>, orientado a clientes exigentes,
+      empresas, turistas y eventos especiales.
+      <br><br>
+      Contamos con una flota moderna que va desde <strong>autos ejecutivos hasta buses de gran capacidad</strong>,
+      con atención personalizada y conductores profesionales.
+    </p>
+  </div>
+</section>
+
+<!-- CATALOGO -->
+<section id="catalogo" class="catalogo">
+  <div class="container">
+    <h2>Catálogo de Vehículos</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Auto Ejecutivo</h3>
+        <p>1 – 3 pasajeros</p>
+        <a href="https://wa.me/595991809877" target="_blank">Cotizar</a>
+      </div>
+      <div class="card">
+        <h3>Van / Minivan</h3>
+        <p>4 – 8 pasajeros</p>
+        <a href="https://wa.me/595991809877" target="_blank">Cotizar</a>
+      </div>
+      <div class="card">
+        <h3>Minibús</h3>
+        <p>9 – 15 pasajeros</p>
+        <a href="https://wa.me/595991809877" target="_blank">Cotizar</a>
+      </div>
+      <div class="card">
+        <h3>Bus</h3>
+        <p>20 – 60+ pasajeros</p>
+        <a href="https://wa.me/595991809877" target="_blank">Cotizar</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="text-align:center">
-  <h2>Reservas</h2>
-  <p>Consultá disponibilidad y tarifas por WhatsApp.</p>
-  <a class="btn" href="https://wa.me/595991809877" target="_blank">Contactar</a>
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p class="subtitle">
+      WhatsApp: +595 991 809 877<br>
+      Atención 24/7 – Asunción, Paraguay
+    </p>
+  </div>
 </section>
 
 <footer>
-  © 2026 Asunción Transfers · Paraguay
+  © Asunción Transfers – Transporte Premium de Pasajeros
 </footer>
+
+<a class="whatsapp" href="https://wa.me/595991809877" target="_blank">💬</a>
 
 </body>
 </html>
