@@ -6,6 +6,7 @@
   <title>Asunción Transfers | Traslados Premium</title>
 
   <style>
+    /* ===== RESET ===== */
     * {
       margin: 0;
       padding: 0;
@@ -28,6 +29,7 @@
       justify-content: space-between;
       align-items: center;
       background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
       z-index: 10;
     }
 
@@ -48,33 +50,28 @@
     }
 
     /* ===== HERO ===== */
-  .hero {
-  position: relative;
-  min-height: 100vh;
-  background-image: url("sedan-premium.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  padding-left: 60px;
-  padding-right: 60px;
-}
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: url("sedan-premium.jpg") no-repeat center / cover;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+    }
 
-    /* overlay oscuro */
-   .hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 0%,
-    #000 90%
-  );
-}
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        #000 90%
+      );
+    }
 
     .hero-content {
       position: relative;
@@ -106,72 +103,93 @@
       opacity: 0.85;
     }
 
+    /* ===== SECCIONES GENERALES ===== */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .btn-small {
+      display: inline-block;
+      background: #25D366;
+      color: #000;
+      padding: 10px 22px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* ===== WHATSAPP FLOTANTE ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .whatsapp-float:hover {
+      opacity: 0.85;
+    }
+
     /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
 
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-image: url("sedan-premium.jpg");
-    background-size: 95%;
-    background-position: center 60px;
-    background-repeat: no-repeat;
-    padding: 320px 20px 40px;
-    background-color: #000;
-  }
+      .hero {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-size: 95%;
+        background-position: center 80px;
+        padding: 340px 20px 40px;
+        text-align: center;
+      }
 
-  .hero-content {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-}
-  .hero-content {
-    margin-top: 40px;
-  }
-
-  .hero-content h2 {
-    font-size: 34px;
-  }
-
-  /* HEADER */
-  header {
-    padding: 15px 20px;
-  }
-
-  nav a {
-    margin-left: 12px;
-    font-size: 13px;
-  }
-}
-  header {
-    padding: 15px 20px;
-  }
-
-  nav a {
-    margin-left: 12px;
-    font-size: 13px;
-  }
-}
-  .hero-content {
-    margin-top: 40px;
-  }
-
-  .hero-content h2 {
-    font-size: 34px;
-  }
-
-  header {
-    padding: 15px 20px;
-  }
-
-  nav a {
-    margin-left: 12px;
-    font-size: 13px;
-  }
-}
+      .hero-content h2 {
+        font-size: 32px;
+      }
 
       header {
         padding: 15px 20px;
@@ -187,31 +205,97 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Asunción Transfers</h1>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Servicios</a>
-      <a href="#">Destinos</a>
-      <a href="#">Quiénes somos</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>
+<!-- ===== HEADER ===== -->
+<header>
+  <h1>Asunción Transfers</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Asunción Transfers</h2>
-      <p>
-        Traslados premium en Asunción, Paraguay y viajes internacionales.
-        Servicio privado, seguro y profesional.
-      </p>
-      <a class="btn" href="https://wa.me/595991809877" target="_blank">
-        Cotizar por WhatsApp
-      </a>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Asunción Transfers</h2>
+    <p>
+      Traslados premium en Asunción, Paraguay y viajes internacionales.
+      Servicio privado, seguro y profesional.
+    </p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">
+      Cotizar por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ===== SERVICIOS / FLOTA ===== -->
+<section id="servicios">
+  <h2>Nuestra Flota</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Sedán Premium</h3>
+      <p>Ejecutivos y traslados privados.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Sedán%20Premium." target="_blank">Cotizar</a>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>SUV</h3>
+      <p>Más espacio y confort para viajes largos.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20SUV." target="_blank">Cotizar</a>
+    </div>
+
+    <div class="card">
+      <h3>Van</h3>
+      <p>Familias y grupos medianos.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Van." target="_blank">Cotizar</a>
+    </div>
+
+    <div class="card">
+      <h3>Minibús</h3>
+      <p>Turismo, eventos y empresas.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Minibús." target="_blank">Cotizar</a>
+    </div>
+
+    <div class="card">
+      <h3>Bus</h3>
+      <p>Grandes grupos y eventos especiales.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Bus." target="_blank">Cotizar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DESTINOS ===== -->
+<section id="destinos">
+  <h2>Destinos</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🇵🇾 Nacionales</h3>
+      <p>Aeropuerto, Asunción, Ciudad del Este, Encarnación y otras ciudades.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20nacional." target="_blank">Cotizar</a>
+    </div>
+
+    <div class="card">
+      <h3>🇦🇷 Argentina</h3>
+      <p>Formosa, Corrientes, Resistencia y más.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20a%20Argentina." target="_blank">Cotizar</a>
+    </div>
+
+    <div class="card">
+      <h3>🇧🇷 Brasil</h3>
+      <p>Foz de Iguazú, Bonito, Camboriú y otras ciudades.</p>
+      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20a%20Brasil." target="_blank">Cotizar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHATSAPP FLOTANTE ===== -->
+<a href="https://wa.me/595991809877" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  💬
+</a>
 
 </body>
 </html>
