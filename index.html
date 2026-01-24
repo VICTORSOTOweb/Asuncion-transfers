@@ -47,6 +47,20 @@ nav a{
   font-size:14px;
 }
 
+.lang{
+  margin-left:20px;
+}
+
+.lang button{
+  background:none;
+  border:1px solid #25D366;
+  color:#25D366;
+  padding:5px 8px;
+  margin-left:5px;
+  cursor:pointer;
+}
+
+/* HAMBURGUESA */
 .menu-toggle{
   display:none;
   flex-direction:column;
@@ -123,15 +137,6 @@ section h2{
   text-align:center;
 }
 
-.card h3{
-  margin:15px 0;
-}
-
-.card p{
-  font-size:14px;
-  opacity:0.9;
-}
-
 /* FEATURES */
 .features{
   display:grid;
@@ -201,9 +206,7 @@ section h2{
   }
 
   .hero-content{text-align:center;}
-
   .hero-content h2{ font-size:32px; }
-
   .hero-content p{ font-size:16px; }
 }
 </style>
@@ -219,118 +222,95 @@ section h2{
   </div>
 
   <nav id="menu">
-    <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-    <a href="#servicios" onclick="toggleMenu()">Servicios</a>
-    <a href="#destinos" onclick="toggleMenu()">Destinos</a>
-    <a href="#flota" onclick="toggleMenu()">Vehículos</a>
-    <a href="#porque" onclick="toggleMenu()">Por qué elegirnos</a>
-    <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+    <a href="#inicio" data-es="Inicio" data-en="Home" data-pt="Início"></a>
+    <a href="#servicios" data-es="Servicios" data-en="Services" data-pt="Serviços"></a>
+    <a href="#destinos" data-es="Destinos" data-en="Destinations" data-pt="Destinos"></a>
+    <a href="#flota" data-es="Vehículos" data-en="Fleet" data-pt="Frota"></a>
+    <a href="#contacto" data-es="Contacto" data-en="Contact" data-pt="Contato"></a>
+
+    <div class="lang">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('pt')">PT</button>
+    </div>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-content">
-    <h2>Traslados Premium</h2>
-    <p>Servicio privado y profesional en Paraguay y el exterior.</p>
-    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+    <h2 data-es="Traslados Premium" data-en="Premium Transfers" data-pt="Transfer Premium"></h2>
+    <p data-es="Servicio privado y profesional en Paraguay y el exterior."
+       data-en="Private and professional service in Paraguay and abroad."
+       data-pt="Serviço privado e profissional no Paraguai e exterior."></p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank"
+       data-es="Cotizar por WhatsApp"
+       data-en="Get a Quote"
+       data-pt="Solicitar Orçamento"></a>
   </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios">
-<h2>Servicios</h2>
-
+<h2 data-es="Servicios" data-en="Services" data-pt="Serviços"></h2>
 <div class="grid">
-
   <div class="card">
     ✈️
-    <h3>Traslados al Aeropuerto</h3>
-    <p>Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20al%20aeropuerto." target="_blank">Cotizar</a>
+    <h3 data-es="Aeropuerto" data-en="Airport" data-pt="Aeroporto"></h3>
+    <p data-es="Traslados puntuales puerta a puerta."
+       data-en="On-time door-to-door transfers."
+       data-pt="Traslados pontuais porta a porta."></p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
     🏢
-    <h3>Servicios Corporativos</h3>
-    <p>Movilidad ejecutiva para empresas, reuniones, visitas y traslados VIP.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20servicio%20corporativo." target="_blank">Cotizar</a>
-  </div>
-
-  <div class="card">
-    🎉
-    <h3>Eventos y Congresos</h3>
-    <p>Transporte organizado para eventos, congresos, bodas y grupos.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20traslados%20para%20un%20evento." target="_blank">Cotizar</a>
+    <h3 data-es="Corporativo" data-en="Corporate" data-pt="Corporativo"></h3>
+    <p data-es="Movilidad ejecutiva profesional."
+       data-en="Executive professional mobility."
+       data-pt="Mobilidade executiva profissional."></p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
     🌎
-    <h3>Turismo Privado</h3>
-    <p>Viajes personalizados nacionales e internacionales con chofer profesional.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20turístico." target="_blank">Cotizar</a>
+    <h3 data-es="Turismo Privado" data-en="Private Tourism" data-pt="Turismo Privado"></h3>
+    <p data-es="Viajes nacionales e internacionales."
+       data-en="National and international trips."
+       data-pt="Viagens nacionais e internacionais."></p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
   </div>
-
 </div>
 </section>
 
 <!-- DESTINOS -->
 <section id="destinos">
-<h2>Destinos</h2>
-
+<h2 data-es="Destinos" data-en="Destinations" data-pt="Destinos"></h2>
 <div class="grid">
   <div class="card">
-    <h3>Nacionales</h3>
-    <p>Asunción, Ciudad del Este, Encarnación y todo Paraguay.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20nacional." target="_blank">Cotizar</a>
+    <h3 data-es="Nacionales" data-en="Domestic" data-pt="Nacionais"></h3>
+    <p>Asunción, Ciudad del Este, Encarnación.</p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
     <h3>Argentina</h3>
     <p>Formosa, Corrientes, Resistencia.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20a%20Argentina." target="_blank">Cotizar</a>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
     <h3>Brasil</h3>
     <p>Foz de Iguazú, Bonito, Camboriú.</p>
-    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20a%20Brasil." target="_blank">Cotizar</a>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar</a>
   </div>
-</div>
-</section>
-
-<!-- FLOTA -->
-<section id="flota">
-<h2>Nuestra Flota</h2>
-<div class="grid">
-  <div class="card"><h3>Sedán</h3><p>Ejecutivos y parejas.</p></div>
-  <div class="card"><h3>SUV</h3><p>Más espacio y confort.</p></div>
-  <div class="card"><h3>Van</h3><p>Grupos y equipaje.</p></div>
-  <div class="card"><h3>Minibus</h3><p>Eventos y grupos.</p></div>
-  <div class="card"><h3>Bus</h3><p>Delegaciones grandes.</p></div>
-</div>
-</section>
-
-<!-- POR QUÉ -->
-<section id="porque">
-<h2>¿Por qué elegirnos?</h2>
-<div class="features">
-  <div>✔ Puntualidad garantizada</div>
-  <div>✔ Choferes profesionales</div>
-  <div>✔ Vehículos modernos</div>
-  <div>✔ Atención personalizada</div>
 </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="contact">
-<h2>Contacto</h2>
+<h2 data-es="Contacto" data-en="Contact" data-pt="Contato"></h2>
 <p>📞 WhatsApp: +595 991 809 877</p>
-<div class="socials">
-  <a href="https://www.instagram.com/asuncion_transfers" target="_blank">Instagram</a>
-  <a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">Facebook</a>
-  <a href="https://www.tiktok.com/@asuncion_transfers" target="_blank">TikTok</a>
-</div>
 </section>
 
 <a class="whatsapp-float" href="https://wa.me/595991809877" target="_blank">💬</a>
@@ -339,6 +319,20 @@ section h2{
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+
+/* MULTI IDIOMA */
+function setLang(lang){
+  document.querySelectorAll("[data-es]").forEach(el=>{
+    el.textContent = el.dataset[lang];
+  });
+}
+
+/* DETECCIÓN AUTOMÁTICA */
+document.addEventListener("DOMContentLoaded",()=>{
+  const lang = navigator.language.startsWith("pt") ? "pt" :
+               navigator.language.startsWith("en") ? "en" : "es";
+  setLang(lang);
+});
 </script>
 
 </body>
