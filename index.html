@@ -6,7 +6,6 @@
 <title>Asunción Transfers | Traslados Premium</title>
 
 <style>
-/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
@@ -22,7 +21,7 @@ body{
   line-height:1.6;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   position:fixed;
   top:0;
@@ -35,11 +34,8 @@ header{
   z-index:1000;
 }
 
-header h1{
-  font-size:20px;
-}
+header h1{ font-size:20px; }
 
-/* NAV */
 nav{
   display:flex;
 }
@@ -51,7 +47,6 @@ nav a{
   font-size:14px;
 }
 
-/* HAMBURGUESA */
 .menu-toggle{
   display:none;
   flex-direction:column;
@@ -65,7 +60,7 @@ nav a{
   margin:4px 0;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   min-height:100vh;
   background:url("images/sedan-premium.jpg") no-repeat center;
@@ -101,7 +96,7 @@ nav a{
   margin-top:15px;
 }
 
-/* ===== SECCIONES ===== */
+/* SECCIONES */
 section{
   padding:90px 40px;
   scroll-margin-top:110px;
@@ -123,7 +118,7 @@ section h2{
 /* CARDS */
 .card{
   background:#111;
-  padding:30px;
+  padding:35px 30px;
   border-radius:18px;
   text-align:center;
 }
@@ -137,7 +132,7 @@ section h2{
   opacity:0.9;
 }
 
-/* ===== POR QUÉ ===== */
+/* FEATURES */
 .features{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -145,10 +140,8 @@ section h2{
   text-align:center;
 }
 
-/* ===== CONTACTO ===== */
-.contact{
-  text-align:center;
-}
+/* CONTACTO */
+.contact{text-align:center;}
 
 .socials a{
   margin:0 12px;
@@ -156,7 +149,7 @@ section h2{
   text-decoration:none;
 }
 
-/* ===== WHATSAPP FLOTANTE ===== */
+/* WHATSAPP */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -174,12 +167,10 @@ section h2{
   z-index:2000;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media(max-width:768px){
 
-  header{
-    padding:15px 20px;
-  }
+  header{ padding:15px 20px; }
 
   nav{
     position:fixed;
@@ -199,13 +190,9 @@ section h2{
     font-size:18px;
   }
 
-  nav.active{
-    left:0;
-  }
+  nav.active{ left:0; }
 
-  .menu-toggle{
-    display:flex;
-  }
+  .menu-toggle{ display:flex; }
 
   .hero{
     background-size:120%;
@@ -213,17 +200,11 @@ section h2{
     padding:480px 20px 40px;
   }
 
-  .hero-content{
-    text-align:center;
-  }
+  .hero-content{text-align:center;}
 
-  .hero-content h2{
-    font-size:32px;
-  }
+  .hero-content h2{ font-size:32px; }
 
-  .hero-content p{
-    font-size:16px;
-  }
+  .hero-content p{ font-size:16px; }
 }
 </style>
 </head>
@@ -259,40 +240,48 @@ section h2{
 <!-- SERVICIOS -->
 <section id="servicios">
 <h2>Servicios</h2>
+
 <div class="grid">
+
   <div class="card">
-    ✈<h3>Aeropuerto</h3>
-    <p>Traslados puntuales puerta a puerta.</p>
+    ✈️
+    <h3>Traslados al Aeropuerto</h3>
+    <p>Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.</p>
     <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20al%20aeropuerto." target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
-    🏢<h3>Corporativos</h3>
-    <p>Movilidad ejecutiva profesional.</p>
+    🏢
+    <h3>Servicios Corporativos</h3>
+    <p>Movilidad ejecutiva para empresas, reuniones, visitas y traslados VIP.</p>
     <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20servicio%20corporativo." target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
-    🎉<h3>Eventos</h3>
-    <p>Congresos, ferias y eventos.</p>
+    🎉
+    <h3>Eventos y Congresos</h3>
+    <p>Transporte organizado para eventos, congresos, bodas y grupos.</p>
     <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20traslados%20para%20un%20evento." target="_blank">Cotizar</a>
   </div>
 
   <div class="card">
-    🌎<h3>Turismo Privado</h3>
-    <p>Viajes nacionales e internacionales.</p>
+    🌎
+    <h3>Turismo Privado</h3>
+    <p>Viajes personalizados nacionales e internacionales con chofer profesional.</p>
     <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20turístico." target="_blank">Cotizar</a>
   </div>
+
 </div>
 </section>
 
 <!-- DESTINOS -->
 <section id="destinos">
 <h2>Destinos</h2>
+
 <div class="grid">
   <div class="card">
     <h3>Nacionales</h3>
-    <p>Asunción, Ciudad del Este, Encarnación y más.</p>
+    <p>Asunción, Ciudad del Este, Encarnación y todo Paraguay.</p>
     <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20nacional." target="_blank">Cotizar</a>
   </div>
 
@@ -314,11 +303,11 @@ section h2{
 <section id="flota">
 <h2>Nuestra Flota</h2>
 <div class="grid">
-  <div class="card"><h3>Sedán</h3><p>Ideal para ejecutivos y parejas.</p></div>
-  <div class="card"><h3>SUV</h3><p>Mayor espacio y confort.</p></div>
-  <div class="card"><h3>Van</h3><p>Grupos pequeños y equipaje.</p></div>
-  <div class="card"><h3>Minibus</h3><p>Eventos y traslados grupales.</p></div>
-  <div class="card"><h3>Bus</h3><p>Grandes delegaciones.</p></div>
+  <div class="card"><h3>Sedán</h3><p>Ejecutivos y parejas.</p></div>
+  <div class="card"><h3>SUV</h3><p>Más espacio y confort.</p></div>
+  <div class="card"><h3>Van</h3><p>Grupos y equipaje.</p></div>
+  <div class="card"><h3>Minibus</h3><p>Eventos y grupos.</p></div>
+  <div class="card"><h3>Bus</h3><p>Delegaciones grandes.</p></div>
 </div>
 </section>
 
