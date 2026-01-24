@@ -3,49 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asunción Transfers | Traslados Premium</title>
+<title>Asunción Transfers | Premium Transfers</title>
 
 <style>
-/* ================= RESET ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#000;color:#fff}
 
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#000;
-  color:#fff;
-  line-height:1.6;
-}
-
-/* ================= HEADER ================= */
+/* HEADER */
 header{
   position:fixed;
   top:0;
   width:100%;
   padding:15px 40px;
-  background:rgba(0,0,0,0.8);
+  background:rgba(0,0,0,.85);
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
 }
+header h1{font-size:20px}
 
-header h1{
-  font-size:20px;
+.lang{
+  margin-left:15px;
+  background:#111;
+  color:#fff;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
 }
 
-/* NAV DESKTOP */
-nav{
-  display:flex;
-}
-
+nav{display:flex;align-items:center}
 nav a{
   color:#fff;
   text-decoration:none;
@@ -53,46 +42,22 @@ nav a{
   font-size:14px;
 }
 
-/* HAMBURGUESA */
-.menu-toggle{
-  display:none;
-  flex-direction:column;
-  cursor:pointer;
-}
+.menu-toggle{display:none;flex-direction:column;cursor:pointer}
+.menu-toggle span{width:26px;height:3px;background:#fff;margin:4px 0}
 
-.menu-toggle span{
-  height:3px;
-  width:26px;
-  background:#fff;
-  margin:4px 0;
-}
-
-/* ================= HERO ================= */
+/* HERO */
 .hero{
   min-height:100vh;
-  background:url("sedan-premium.jpg") no-repeat;
-  background-size:cover;
-  background-position:center;
+  background:#000;
   display:flex;
-  align-items:flex-end;
-  padding:140px 40px 90px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:140px 20px;
 }
+.hero h2{font-size:42px;margin-bottom:15px}
+.hero p{font-size:18px;margin-bottom:30px}
 
-.hero-content{
-  max-width:600px;
-}
-
-.hero-content h2{
-  font-size:46px;
-  margin-bottom:15px;
-}
-
-.hero-content p{
-  font-size:18px;
-  margin-bottom:30px;
-}
-
-/* BOTÓN */
 .btn{
   background:#25D366;
   color:#000;
@@ -100,75 +65,24 @@ nav a{
   border-radius:30px;
   font-weight:bold;
   text-decoration:none;
-  display:inline-block;
 }
 
-/* ================= SECCIONES ================= */
-section{
-  padding:90px 40px;
-  scroll-margin-top:110px;
-}
+/* SECTIONS */
+section{padding:90px 40px;scroll-margin-top:110px}
+section h2{text-align:center;font-size:34px;margin-bottom:50px}
 
-section h2{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:50px;
-}
-
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
-
-/* CARDS */
 .card{
   background:#111;
   padding:30px;
-  border-radius:16px;
-  text-align:center;
+  border-radius:18px;
 }
 
-.card h3{
-  margin:15px 0;
-}
-
-.card p{
-  font-size:14px;
-  opacity:0.9;
-}
-
-.card a{
-  display:inline-block;
-  margin-top:15px;
-  background:#25D366;
-  color:#000;
-  padding:10px 20px;
-  border-radius:20px;
-  text-decoration:none;
-}
-
-/* POR QUÉ */
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:25px;
-  text-align:center;
-}
-
-/* CONTACTO */
-.contact{
-  text-align:center;
-}
-
-.socials a{
-  margin:0 12px;
-  color:#25D366;
-  text-decoration:none;
-}
-
-/* WHATSAPP FLOTANTE */
+/* WHATSAPP */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -183,83 +97,24 @@ section h2{
   justify-content:center;
   font-size:26px;
   text-decoration:none;
-  z-index:2000;
 }
 
-/* WHATSAPP BAR MOBILE */
-.whatsapp-bar{
-  display:none;
-}
-
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media(max-width:768px){
-
-  header{
-    padding:15px 20px;
-  }
-
+  header{padding:15px 20px}
   nav{
     position:fixed;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100vh;
+    top:0;left:-100%;
+    width:100%;height:100vh;
     background:#000;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    transition:0.3s;
+    transition:.3s;
   }
-
-  nav a{
-    margin:15px 0;
-    font-size:18px;
-  }
-
-  nav.active{
-    left:0;
-  }
-
-  .menu-toggle{
-    display:flex;
-  }
-
-  .hero{
-    background-size:120%;
-    background-position:center 120px;
-    padding:480px 20px 40px;
-  }
-
-  .hero-content{
-    text-align:center;
-  }
-
-  .hero-content h2{
-    font-size:32px;
-  }
-
-  .hero-content p{
-    font-size:16px;
-  }
-
-  .whatsapp-bar{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#25D366;
-    color:#000;
-    text-align:center;
-    padding:15px;
-    font-weight:bold;
-    text-decoration:none;
-    display:block;
-    z-index:3000;
-  }
-
-  body{
-    padding-bottom:70px;
-  }
+  nav.active{left:0}
+  nav a{margin:15px 0;font-size:18px}
+  .menu-toggle{display:flex}
 }
 </style>
 </head>
@@ -269,95 +124,158 @@ section h2{
 <header>
   <h1>Asunción Transfers</h1>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div style="display:flex;align-items:center">
+    <select class="lang" onchange="setLanguage(this.value)">
+      <option value="es">ES</option>
+      <option value="en">EN</option>
+      <option value="pt">PT</option>
+    </select>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 
   <nav id="menu">
-    <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-    <a href="#servicios" onclick="toggleMenu()">Servicios</a>
-    <a href="#destinos" onclick="toggleMenu()">Destinos</a>
-    <a href="#flota" onclick="toggleMenu()">Vehículos</a>
-    <a href="#porque" onclick="toggleMenu()">Por qué elegirnos</a>
-    <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+    <a href="#inicio" data-i18n="nav_home" onclick="toggleMenu()">Inicio</a>
+    <a href="#servicios" data-i18n="nav_services" onclick="toggleMenu()">Servicios</a>
+    <a href="#destinos" data-i18n="nav_destinations" onclick="toggleMenu()">Destinos</a>
+    <a href="#flota" data-i18n="nav_fleet" onclick="toggleMenu()">Vehículos</a>
+    <a href="#contacto" data-i18n="nav_contact" onclick="toggleMenu()">Contacto</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="inicio">
-  <div class="hero-content">
-    <h2>Traslados Premium</h2>
-    <p>Servicio privado y profesional en Asunción, Paraguay y viajes internacionales.</p>
-    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+  <div>
+    <h2 data-i18n="hero_title">Traslados Premium</h2>
+    <p data-i18n="hero_text">Servicio privado y profesional en Paraguay y el exterior.</p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank" data-i18n="btn_whatsapp">
+      Cotizar por WhatsApp
+    </a>
   </div>
 </section>
 
-<!-- SERVICIOS -->
 <section id="servicios">
-<h2>Servicios</h2>
+<h2 data-i18n="services_title">Servicios</h2>
 <div class="grid">
-  <div class="card">✈<h3>Aeropuerto</h3><p>Puntualidad garantizada.</p></div>
-  <div class="card">🏢<h3>Corporativos</h3><p>Ejecutivo profesional.</p></div>
-  <div class="card">🎉<h3>Eventos</h3><p>Congresos y ferias.</p></div>
-  <div class="card">🌎<h3>Turismo</h3><p>Nacional e internacional.</p></div>
+  <div class="card" data-i18n="service_1">✈ Traslados al Aeropuerto</div>
+  <div class="card" data-i18n="service_2">🏢 Servicios Corporativos</div>
+  <div class="card" data-i18n="service_3">🎉 Eventos y Congresos</div>
+  <div class="card" data-i18n="service_4">🌎 Turismo Privado</div>
 </div>
 </section>
 
-<!-- DESTINOS -->
 <section id="destinos">
-<h2>Destinos</h2>
+<h2 data-i18n="destinations_title">Destinos</h2>
 <div class="grid">
-  <div class="card"><h3>Nacionales</h3><p>Asunción y todo Paraguay.</p></div>
-  <div class="card"><h3>Internacionales</h3><p>Argentina y Brasil.</p></div>
+  <div class="card" data-i18n="dest_nat">Nacionales: Todo Paraguay</div>
+  <div class="card" data-i18n="dest_int">Internacionales: Argentina y Brasil</div>
 </div>
 </section>
 
-<!-- FLOTA -->
 <section id="flota">
-<h2>Nuestra Flota</h2>
+<h2 data-i18n="fleet_title">Nuestra Flota</h2>
 <div class="grid">
-  <div class="card">🚗<h3>Sedán</h3><p>Ejecutivo</p></div>
-  <div class="card">🚙<h3>SUV</h3><p>Confort</p></div>
-  <div class="card">🚐<h3>Van</h3><p>Grupos</p></div>
-  <div class="card">🚌<h3>Minibus</h3><p>Eventos</p></div>
-  <div class="card">🚍<h3>Bus</h3><p>Grandes grupos</p></div>
+  <div class="card" data-i18n="fleet_1">🚗 Sedán Ejecutivo</div>
+  <div class="card" data-i18n="fleet_2">🚙 SUV Premium</div>
+  <div class="card" data-i18n="fleet_3">🚐 Vans y Minibus</div>
 </div>
 </section>
 
-<!-- POR QUÉ -->
-<section id="porque">
-<h2>¿Por qué elegirnos?</h2>
-<div class="features">
-  <div>✔ Puntualidad</div>
-  <div>✔ Choferes profesionales</div>
-  <div>✔ Vehículos modernos</div>
-  <div>✔ Atención personalizada</div>
-</div>
+<section id="contacto">
+<h2 data-i18n="contact_title">Contacto</h2>
+<p>📞 +595 991 809 877</p>
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="contact">
-<h2>Contacto</h2>
-<p>📞 WhatsApp: +595 991 809 877</p>
-<div class="socials">
-  <a href="https://www.instagram.com/asuncion_transfers" target="_blank">Instagram</a>
-  <a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">Facebook</a>
-  <a href="https://www.tiktok.com/@asuncion_transfers" target="_blank">TikTok</a>
-</div>
-</section>
-
-<!-- WHATSAPP -->
 <a class="whatsapp-float" href="https://wa.me/595991809877" target="_blank">💬</a>
-<a class="whatsapp-bar" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado." target="_blank">
-💬 Cotizar por WhatsApp
-</a>
 
 <script>
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+
+/* TRADUCCIONES */
+const translations = {
+  es:{
+    nav_home:"Inicio",
+    nav_services:"Servicios",
+    nav_destinations:"Destinos",
+    nav_fleet:"Vehículos",
+    nav_contact:"Contacto",
+    hero_title:"Traslados Premium",
+    hero_text:"Servicio privado y profesional en Paraguay y el exterior.",
+    btn_whatsapp:"Cotizar por WhatsApp",
+    services_title:"Servicios",
+    service_1:"✈ Traslados al Aeropuerto",
+    service_2:"🏢 Servicios Corporativos",
+    service_3:"🎉 Eventos y Congresos",
+    service_4:"🌎 Turismo Privado",
+    destinations_title:"Destinos",
+    dest_nat:"Nacionales: Todo Paraguay",
+    dest_int:"Internacionales: Argentina y Brasil",
+    fleet_title:"Nuestra Flota",
+    fleet_1:"🚗 Sedán Ejecutivo",
+    fleet_2:"🚙 SUV Premium",
+    fleet_3:"🚐 Vans y Minibus",
+    contact_title:"Contacto"
+  },
+  en:{
+    nav_home:"Home",
+    nav_services:"Services",
+    nav_destinations:"Destinations",
+    nav_fleet:"Fleet",
+    nav_contact:"Contact",
+    hero_title:"Premium Transfers",
+    hero_text:"Private and professional transfer service.",
+    btn_whatsapp:"Get a Quote on WhatsApp",
+    services_title:"Services",
+    service_1:"✈ Airport Transfers",
+    service_2:"🏢 Corporate Services",
+    service_3:"🎉 Events & Congresses",
+    service_4:"🌎 Private Tourism",
+    destinations_title:"Destinations",
+    dest_nat:"Domestic: All Paraguay",
+    dest_int:"International: Argentina & Brazil",
+    fleet_title:"Our Fleet",
+    fleet_1:"🚗 Executive Sedan",
+    fleet_2:"🚙 Premium SUV",
+    fleet_3:"🚐 Vans & Minibus",
+    contact_title:"Contact"
+  },
+  pt:{
+    nav_home:"Início",
+    nav_services:"Serviços",
+    nav_destinations:"Destinos",
+    nav_fleet:"Frota",
+    nav_contact:"Contato",
+    hero_title:"Transfers Premium",
+    hero_text:"Serviço privado e profissional.",
+    btn_whatsapp:"Solicitar orçamento",
+    services_title:"Serviços",
+    service_1:"✈ Traslados Aeroporto",
+    service_2:"🏢 Corporativo",
+    service_3:"🎉 Eventos",
+    service_4:"🌎 Turismo Privado",
+    destinations_title:"Destinos",
+    dest_nat:"Nacionais: Todo Paraguai",
+    dest_int:"Internacionais: Argentina e Brasil",
+    fleet_title:"Nossa Frota",
+    fleet_1:"🚗 Sedã Executivo",
+    fleet_2:"🚙 SUV Premium",
+    fleet_3:"🚐 Vans e Minibus",
+    contact_title:"Contato"
+  }
+};
+
+function setLanguage(lang){
+  localStorage.setItem("lang", lang);
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    el.innerText = translations[lang][el.dataset.i18n];
+  });
+}
+
+const savedLang = localStorage.getItem("lang") || "es";
+setLanguage(savedLang);
 </script>
 
 </body>
