@@ -3,75 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asunción Transfers</title>
+<title>Asunción Transfers | Traslados Premium</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#0f172a;color:#fff;scroll-behavior:smooth}
-
-/* HEADER */
-header{
-position:fixed;top:0;width:100%;
-background:#020617;
-display:flex;justify-content:space-between;align-items:center;
-padding:15px 30px;z-index:1000
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
-header h1{font-size:20px;color:#38bdf8}
-nav{display:flex;gap:20px}
-nav a{color:#cbd5f5;text-decoration:none;font-size:14px}
-nav a:hover{color:#38bdf8}
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background:#000;
+  color:#fff;
+  line-height:1.6;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 40px;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+header h1{
+  font-size:20px;
+}
+
+/* NAV */
+nav{
+  display:flex;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
 
 /* HAMBURGUESA */
-.menu-btn{display:none;font-size:24px;cursor:pointer}
-@media(max-width:768px){
-nav{display:none;flex-direction:column;position:absolute;top:60px;right:20px;background:#020617;padding:15px;border-radius:10px}
-nav.active{display:flex}
-.menu-btn{display:block}
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
 }
 
-/* HERO */
+.menu-toggle span{
+  height:3px;
+  width:26px;
+  background:#fff;
+  margin:4px 0;
+}
+
+/* ===== HERO ===== */
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(2,6,23,.7),rgba(2,6,23,.7)),
-url("img/hero.jpg") center/cover no-repeat;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-text-align:center;padding:20px
-}
-.hero h2{font-size:42px;margin-bottom:10px}
-.hero p{font-size:18px;color:#cbd5f5;margin-bottom:25px}
-.btn{
-background:#22c55e;color:#022c22;
-padding:15px 30px;border-radius:30px;
-text-decoration:none;font-weight:bold
+  min-height:100vh;
+  background:url("images/sedan-premium.jpg") no-repeat center;
+  background-size:cover;
+  display:flex;
+  align-items:flex-end;
+  padding:140px 40px 90px;
 }
 
-/* SECCIONES */
-section{padding:100px 8%}
-section h2{text-align:center;font-size:32px;margin-bottom:50px}
+.hero-content{
+  max-width:600px;
+}
+
+.hero-content h2{
+  font-size:46px;
+  margin-bottom:15px;
+}
+
+.hero-content p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+/* BOTÓN */
+.btn{
+  background:#25D366;
+  color:#000;
+  padding:14px 30px;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
+}
+
+/* ===== SECCIONES ===== */
+section{
+  padding:90px 40px;
+  scroll-margin-top:110px;
+}
+
+section h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:50px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
 
 /* CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px
-}
 .card{
-background:#020617;
-padding:30px;border-radius:20px;
-box-shadow:0 0 25px rgba(0,0,0,.4)
+  background:#111;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
 }
-.card h3{margin-bottom:10px}
-.card p{color:#cbd5f5;font-size:14px;margin-bottom:15px}
-.card a{display:inline-block}
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#22c55e;color:#022c22;
-width:60px;height:60px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-font-size:28px;text-decoration:none;z-index:999
+.card h3{
+  margin:15px 0;
+}
+
+.card p{
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* ===== POR QUÉ ===== */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+  text-align:center;
+}
+
+/* ===== CONTACTO ===== */
+.contact{
+  text-align:center;
+}
+
+.socials a{
+  margin:0 12px;
+  color:#25D366;
+  text-decoration:none;
+}
+
+/* ===== WHATSAPP FLOTANTE ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#000;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+  z-index:2000;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+  header{
+    padding:15px 20px;
+  }
+
+  nav{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100vh;
+    background:#000;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:0.3s;
+  }
+
+  nav a{
+    margin:15px 0;
+    font-size:18px;
+  }
+
+  nav.active{
+    left:0;
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  .hero{
+    background-size:120%;
+    background-position:center 120px;
+    padding:480px 20px 40px;
+  }
+
+  .hero-content{
+    text-align:center;
+  }
+
+  .hero-content h2{
+    font-size:32px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
 }
 </style>
 </head>
@@ -79,53 +231,58 @@ font-size:28px;text-decoration:none;z-index:999
 <body>
 
 <header>
-<h1>Asunción Transfers</h1>
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-<nav id="menu">
-<a href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#destinos">Destinos</a>
-<a href="#flota">Vehículos</a>
-<a href="#contacto">Contacto</a>
-</nav>
+  <h1>Asunción Transfers</h1>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav id="menu">
+    <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+    <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+    <a href="#destinos" onclick="toggleMenu()">Destinos</a>
+    <a href="#flota" onclick="toggleMenu()">Vehículos</a>
+    <a href="#porque" onclick="toggleMenu()">Por qué elegirnos</a>
+    <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-<h2>Traslados Premium</h2>
-<p>Servicio privado y profesional en Paraguay y el exterior</p>
-<a class="btn" href="https://wa.me/595000000000">Cotizar por WhatsApp</a>
+  <div class="hero-content">
+    <h2>Traslados Premium</h2>
+    <p>Servicio privado y profesional en Paraguay y el exterior.</p>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+  </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios">
 <h2>Servicios</h2>
 <div class="grid">
+  <div class="card">
+    ✈<h3>Aeropuerto</h3>
+    <p>Traslados puntuales puerta a puerta.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20al%20aeropuerto." target="_blank">Cotizar</a>
+  </div>
 
-<div class="card">
-<h3>✈ Traslados al Aeropuerto</h3>
-<p>Servicio puerta a puerta, monitoreo de vuelos y asistencia personalizada.</p>
-<a class="btn" href="https://wa.me/595000000000">Cotizar</a>
-</div>
+  <div class="card">
+    🏢<h3>Corporativos</h3>
+    <p>Movilidad ejecutiva profesional.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20servicio%20corporativo." target="_blank">Cotizar</a>
+  </div>
 
-<div class="card">
-<h3>🏢 Servicios Corporativos</h3>
-<p>Movilidad ejecutiva para empresas, reuniones, visitas y traslados VIP.</p>
-<a class="btn" href="https://wa.me/595000000000">Cotizar</a>
-</div>
+  <div class="card">
+    🎉<h3>Eventos</h3>
+    <p>Congresos, ferias y eventos.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20traslados%20para%20un%20evento." target="_blank">Cotizar</a>
+  </div>
 
-<div class="card">
-<h3>🎉 Eventos y Congresos</h3>
-<p>Transporte organizado para eventos, bodas, congresos y grupos.</p>
-<a class="btn" href="https://wa.me/595000000000">Cotizar</a>
-</div>
-
-<div class="card">
-<h3>🌎 Turismo Privado</h3>
-<p>Viajes personalizados nacionales e internacionales con chofer profesional.</p>
-<a class="btn" href="https://wa.me/595000000000">Cotizar</a>
-</div>
-
+  <div class="card">
+    🌎<h3>Turismo Privado</h3>
+    <p>Viajes nacionales e internacionales.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20turístico." target="_blank">Cotizar</a>
+  </div>
 </div>
 </section>
 
@@ -133,17 +290,67 @@ font-size:28px;text-decoration:none;z-index:999
 <section id="destinos">
 <h2>Destinos</h2>
 <div class="grid">
+  <div class="card">
+    <h3>Nacionales</h3>
+    <p>Asunción, Ciudad del Este, Encarnación y más.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20nacional." target="_blank">Cotizar</a>
+  </div>
 
-<div class="card">
-<h3>🇵🇾 Nacionales</h3>
-<p>Asunción, Aeropuerto, Ciudad del Este, Encarnación y todo Paraguay.</p>
-<a class="btn" href="https://wa.me/595000000000">Cotizar</a>
+  <div class="card">
+    <h3>Argentina</h3>
+    <p>Formosa, Corrientes, Resistencia.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20a%20Argentina." target="_blank">Cotizar</a>
+  </div>
+
+  <div class="card">
+    <h3>Brasil</h3>
+    <p>Foz de Iguazú, Bonito, Camboriú.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20a%20Brasil." target="_blank">Cotizar</a>
+  </div>
 </div>
+</section>
 
-<div class="card">
-<h3>🌎 Internacionales</h3>
-<p>
-Argentina: Formosa, Corrientes, Resistencia.<br>
-Brasil: Foz de Iguazú, Bonito, Camboriú.
-</p>
-<a class="btn" href
+<!-- FLOTA -->
+<section id="flota">
+<h2>Nuestra Flota</h2>
+<div class="grid">
+  <div class="card"><h3>Sedán</h3><p>Ideal para ejecutivos y parejas.</p></div>
+  <div class="card"><h3>SUV</h3><p>Mayor espacio y confort.</p></div>
+  <div class="card"><h3>Van</h3><p>Grupos pequeños y equipaje.</p></div>
+  <div class="card"><h3>Minibus</h3><p>Eventos y traslados grupales.</p></div>
+  <div class="card"><h3>Bus</h3><p>Grandes delegaciones.</p></div>
+</div>
+</section>
+
+<!-- POR QUÉ -->
+<section id="porque">
+<h2>¿Por qué elegirnos?</h2>
+<div class="features">
+  <div>✔ Puntualidad garantizada</div>
+  <div>✔ Choferes profesionales</div>
+  <div>✔ Vehículos modernos</div>
+  <div>✔ Atención personalizada</div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+<h2>Contacto</h2>
+<p>📞 WhatsApp: +595 991 809 877</p>
+<div class="socials">
+  <a href="https://www.instagram.com/asuncion_transfers" target="_blank">Instagram</a>
+  <a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">Facebook</a>
+  <a href="https://www.tiktok.com/@asuncion_transfers" target="_blank">TikTok</a>
+</div>
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/595991809877" target="_blank">💬</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
