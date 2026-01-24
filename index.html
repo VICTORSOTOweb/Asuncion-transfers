@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asunción Transfers | Traslados Premium</title>
+  <title>Asunción Transfers | Traslados Premium en Paraguay</title>
+
+  <meta name="description" content="Traslados premium en Asunción, Paraguay y viajes internacionales a Argentina y Brasil. Sedán, SUV, Van, Minibús y Bus.">
 
   <style>
-    /* ===== RESET ===== */
     * {
       margin: 0;
       padding: 0;
@@ -45,13 +46,8 @@
       font-size: 14px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     /* ===== HERO ===== */
     .hero {
-      position: relative;
       min-height: 100vh;
       background: url("sedan-premium.jpg") no-repeat center / cover;
       display: flex;
@@ -59,22 +55,7 @@
       padding: 0 60px;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 140px;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0) 0%,
-        #000 90%
-      );
-    }
-
     .hero-content {
-      position: relative;
       max-width: 600px;
     }
 
@@ -85,12 +66,11 @@
 
     .hero-content p {
       font-size: 18px;
-      line-height: 1.5;
       margin-bottom: 30px;
+      line-height: 1.5;
     }
 
     .btn {
-      display: inline-block;
       background: #25D366;
       color: #000;
       padding: 14px 28px;
@@ -99,11 +79,7 @@
       text-decoration: none;
     }
 
-    .btn:hover {
-      opacity: 0.85;
-    }
-
-    /* ===== SECCIONES GENERALES ===== */
+    /* ===== SECCIONES ===== */
     section {
       padding: 80px 20px;
       text-align: center;
@@ -116,10 +92,10 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .card {
@@ -131,18 +107,15 @@
 
     .card h3 {
       margin-bottom: 12px;
-      font-size: 20px;
     }
 
     .card p {
       color: #ccc;
       font-size: 14px;
       margin-bottom: 16px;
-      line-height: 1.4;
     }
 
     .btn-small {
-      display: inline-block;
       background: #25D366;
       color: #000;
       padding: 10px 22px;
@@ -150,6 +123,24 @@
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
+    }
+
+    /* ===== CONTACTO ===== */
+    .contacto-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contacto-links a {
+      background: #111;
+      border: 1px solid #222;
+      padding: 14px 22px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
     }
 
     /* ===== WHATSAPP FLOTANTE ===== */
@@ -171,13 +162,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
-    .whatsapp-float:hover {
-      opacity: 0.85;
-    }
-
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-
       .hero {
         flex-direction: column;
         justify-content: flex-start;
@@ -205,97 +191,75 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header>
   <h1>Asunción Transfers</h1>
   <nav>
     <a href="#">Inicio</a>
+    <a href="#porque">Por qué elegirnos</a>
     <a href="#servicios">Servicios</a>
     <a href="#destinos">Destinos</a>
-    <a href="#">Contacto</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h2>Asunción Transfers</h2>
-    <p>
-      Traslados premium en Asunción, Paraguay y viajes internacionales.
-      Servicio privado, seguro y profesional.
-    </p>
-    <a class="btn" href="https://wa.me/595991809877" target="_blank">
+    <p>Traslados premium en Paraguay y viajes internacionales.</p>
+    <a class="btn" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado.%20Origen:%20_____%20Destino:%20_____%20Fecha:%20_____" target="_blank">
       Cotizar por WhatsApp
     </a>
   </div>
 </section>
 
-<!-- ===== SERVICIOS / FLOTA ===== -->
+<!-- POR QUÉ ELEGIRNOS -->
+<section id="porque">
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="grid">
+    <div class="card"><h3>✔ Puntualidad</h3><p>Respetamos tu tiempo.</p></div>
+    <div class="card"><h3>✔ Choferes profesionales</h3><p>Experiencia y seguridad.</p></div>
+    <div class="card"><h3>✔ Flota confortable</h3><p>Vehículos habilitados.</p></div>
+    <div class="card"><h3>✔ Atención 24/7</h3><p>Siempre disponibles.</p></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
 <section id="servicios">
   <h2>Nuestra Flota</h2>
-
   <div class="grid">
-    <div class="card">
-      <h3>Sedán Premium</h3>
-      <p>Ejecutivos y traslados privados.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Sedán%20Premium." target="_blank">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <h3>SUV</h3>
-      <p>Más espacio y confort para viajes largos.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20SUV." target="_blank">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <h3>Van</h3>
-      <p>Familias y grupos medianos.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Van." target="_blank">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <h3>Minibús</h3>
-      <p>Turismo, eventos y empresas.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Minibús." target="_blank">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <h3>Bus</h3>
-      <p>Grandes grupos y eventos especiales.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20Bus." target="_blank">Cotizar</a>
-    </div>
+    <div class="card"><h3>Sedán Premium</h3><p>Ejecutivos.</p><a class="btn-small" href="https://wa.me/595991809877">Cotizar</a></div>
+    <div class="card"><h3>SUV</h3><p>Más espacio.</p><a class="btn-small" href="https://wa.me/595991809877">Cotizar</a></div>
+    <div class="card"><h3>Van</h3><p>Grupos.</p><a class="btn-small" href="https://wa.me/595991809877">Cotizar</a></div>
+    <div class="card"><h3>Minibús</h3><p>Eventos.</p><a class="btn-small" href="https://wa.me/595991809877">Cotizar</a></div>
+    <div class="card"><h3>Bus</h3><p>Grandes grupos.</p><a class="btn-small" href="https://wa.me/595991809877">Cotizar</a></div>
   </div>
 </section>
 
-<!-- ===== DESTINOS ===== -->
+<!-- DESTINOS -->
 <section id="destinos">
   <h2>Destinos</h2>
-
   <div class="grid">
-    <div class="card">
-      <h3>🇵🇾 Nacionales</h3>
-      <p>Aeropuerto, Asunción, Ciudad del Este, Encarnación y otras ciudades.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20nacional." target="_blank">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <h3>🇦🇷 Argentina</h3>
-      <p>Formosa, Corrientes, Resistencia y más.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20a%20Argentina." target="_blank">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <h3>🇧🇷 Brasil</h3>
-      <p>Foz de Iguazú, Bonito, Camboriú y otras ciudades.</p>
-      <a class="btn-small" href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20a%20Brasil." target="_blank">Cotizar</a>
-    </div>
+    <div class="card"><h3>🇵🇾 Nacionales</h3><p>Asunción, Aeropuerto, CDE, Encarnación.</p></div>
+    <div class="card"><h3>🇦🇷 Argentina</h3><p>Formosa, Corrientes, Resistencia.</p></div>
+    <div class="card"><h3>🇧🇷 Brasil</h3><p>Foz, Bonito, Camboriú.</p></div>
   </div>
 </section>
 
-<!-- ===== WHATSAPP FLOTANTE ===== -->
-<a href="https://wa.me/595991809877" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-  💬
-</a>
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="contacto-links">
+    <a href="https://wa.me/595991809877" target="_blank">📱 WhatsApp</a>
+    <a href="https://www.instagram.com/asuncion_transfers?igsh=a29xaHU3enY2N3Zx" target="_blank">📸 Instagram</a>
+    <a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">📘 Facebook</a>
+    <a href="https://www.tiktok.com/@asuncion_transfers?_r=1&_t=ZS-93L24qXAQMB" target="_blank">🎵 TikTok</a>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/595991809877" class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
