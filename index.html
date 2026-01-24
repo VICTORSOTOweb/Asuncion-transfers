@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asunción Transfers | Traslados Premium</title>
+<title>Asunción Transfers | Premium Transfers</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
@@ -18,31 +18,15 @@ header{
   display:flex;justify-content:space-between;align-items:center;
   z-index:1000
 }
-header h1{font-size:20px}
-nav{display:flex;align-items:center}
 nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}
-.lang-switch button{
-  margin-left:10px;
-  background:none;
-  border:1px solid #25D366;
-  color:#25D366;
-  padding:4px 8px;
-  cursor:pointer;
-  border-radius:6px;
-  font-size:12px
-}
-
-/* MENU MOBILE */
 .menu-toggle{display:none;flex-direction:column;cursor:pointer}
 .menu-toggle span{height:3px;width:26px;background:#fff;margin:4px 0}
 
 /* HERO */
 .hero{
   min-height:100vh;
-  background:url("sedan-premium.jpg") no-repeat center;
-  background-size:cover;
-  display:flex;
-  align-items:flex-end;
+  background:url("sedan-premium.jpg") no-repeat center/cover;
+  display:flex;align-items:flex-end;
   padding:140px 40px 90px
 }
 .hero-content{max-width:600px}
@@ -51,13 +35,9 @@ nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}
 
 /* BUTTON */
 .btn{
-  background:#25D366;
-  color:#000;
-  padding:14px 30px;
-  border-radius:30px;
-  font-weight:bold;
-  text-decoration:none;
-  display:inline-block
+  background:#25D366;color:#000;
+  padding:14px 30px;border-radius:30px;
+  font-weight:bold;text-decoration:none;display:inline-block
 }
 
 /* SECTIONS */
@@ -65,23 +45,26 @@ section{padding:90px 40px;scroll-margin-top:110px}
 section h2{text-align:center;font-size:36px;margin-bottom:50px}
 
 /* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
+}
 
 /* CARD */
 .card{
-  background:#111;
-  padding:35px 30px;
-  border-radius:18px;
-  text-align:center
+  background:#111;padding:35px 30px;
+  border-radius:18px;text-align:center
 }
-.card h3{margin:15px 0}
-.card p{font-size:14px;opacity:.9}
 
 /* FEATURES */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;text-align:center}
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;text-align:center
+}
 
-/* CONTACT */
-.contact{text-align:center}
+/* SOCIAL */
 .socials a{margin:0 12px;color:#25D366;text-decoration:none}
 
 /* WHATSAPP */
@@ -99,15 +82,14 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
   nav{
     position:fixed;top:0;left:-100%;
     width:100%;height:100vh;
-    background:#000;
-    flex-direction:column;
+    background:#000;flex-direction:column;
     justify-content:center;align-items:center;
     transition:.3s
   }
   nav.active{left:0}
   nav a{margin:15px 0;font-size:18px}
   .menu-toggle{display:flex}
-  .hero{padding:480px 20px 40px;background-size:120%;background-position:center 120px}
+  .hero{padding:480px 20px 40px}
   .hero-content{text-align:center}
   .hero-content h2{font-size:32px}
 }
@@ -124,18 +106,15 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
   </div>
 
   <nav id="menu">
-    <a href="#inicio" data-i18n="menu_inicio">Inicio</a>
-    <a href="#servicios" data-i18n="menu_servicios">Servicios</a>
-    <a href="#destinos" data-i18n="menu_destinos">Destinos</a>
-    <a href="#flota" data-i18n="menu_flota">Vehículos</a>
-    <a href="#porque" data-i18n="menu_porque">Por qué elegirnos</a>
-    <a href="#contacto" data-i18n="menu_contacto">Contacto</a>
-
-    <div class="lang-switch">
-      <button onclick="setLang('es')">ES</button>
-      <button onclick="setLang('en')">EN</button>
-      <button onclick="setLang('pt')">PT</button>
-    </div>
+    <a data-i18n="menu_inicio" href="#inicio">Inicio</a>
+    <a data-i18n="menu_servicios" href="#servicios">Servicios</a>
+    <a data-i18n="menu_destinos" href="#destinos">Destinos</a>
+    <a data-i18n="menu_flota" href="#flota">Vehículos</a>
+    <a data-i18n="menu_porque" href="#porque">Por qué elegirnos</a>
+    <a data-i18n="menu_contacto" href="#contacto">Contacto</a>
+    <a onclick="setLang('es')">ES</a>
+    <a onclick="setLang('en')">EN</a>
+    <a onclick="setLang('pt')">PT</a>
   </nav>
 </header>
 
@@ -143,105 +122,103 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
   <div class="hero-content">
     <h2 data-i18n="hero_title">Traslados Premium</h2>
     <p data-i18n="hero_text">Servicio privado y profesional en Paraguay y el exterior.</p>
-    <a class="btn" href="https://wa.me/595991809877" target="_blank" data-i18n="cotizar">Cotizar por WhatsApp</a>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank" data-i18n="cotizar">Cotizar</a>
   </div>
 </section>
 
 <section id="servicios">
 <h2 data-i18n="servicios">Servicios</h2>
 <div class="grid">
-  <div class="card">
-    <h3 data-i18n="aero">Traslados al Aeropuerto</h3>
-    <p data-i18n="aero_desc">Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.</p>
-    <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
-  </div>
 
-  <div class="card">
-    <h3 data-i18n="corp">Servicios Corporativos</h3>
-    <p data-i18n="corp_desc">Movilidad ejecutiva para empresas, reuniones y traslados VIP.</p>
-    <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
-  </div>
+<div class="card">
+✈️
+<h3 data-i18n="aero">Traslados al Aeropuerto</h3>
+<p data-i18n="aero_desc">Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.</p>
+<a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
+</div>
 
-  <div class="card">
-    <h3 data-i18n="eventos">Eventos y Congresos</h3>
-    <p data-i18n="eventos_desc">Transporte organizado para eventos, congresos y grupos.</p>
-    <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
-  </div>
+<div class="card">
+🏢
+<h3 data-i18n="corp">Servicios Corporativos</h3>
+<p data-i18n="corp_desc">Movilidad ejecutiva para empresas, reuniones, visitas y traslados VIP.</p>
+<a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
+</div>
 
-  <div class="card">
-    <h3 data-i18n="turismo">Turismo Privado</h3>
-    <p data-i18n="turismo_desc">Viajes personalizados nacionales e internacionales con chofer profesional.</p>
-    <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
-  </div>
+<div class="card">
+🎉
+<h3 data-i18n="eventos">Eventos y Congresos</h3>
+<p data-i18n="eventos_desc">Transporte organizado para eventos, congresos, bodas y grupos.</p>
+<a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
+</div>
+
+<div class="card">
+🌎
+<h3 data-i18n="turismo">Turismo Privado</h3>
+<p data-i18n="turismo_desc">Viajes personalizados nacionales e internacionales con chofer profesional.</p>
+<a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
+</div>
+
 </div>
 </section>
 
 <section id="destinos">
 <h2 data-i18n="destinos">Destinos</h2>
 <div class="grid">
-  <div class="card"><h3 data-i18n="nac">Nacionales</h3><p>Asunción, Ciudad del Este, Encarnación y más.</p></div>
-  <div class="card"><h3>Argentina</h3><p>Formosa, Corrientes, Resistencia.</p></div>
-  <div class="card"><h3>Brasil</h3><p>Foz de Iguazú, Bonito, Camboriú.</p></div>
+<div class="card">🇵🇾 Asunción · Ciudad del Este · Encarnación</div>
+<div class="card">🇦🇷 Formosa · Corrientes · Resistencia</div>
+<div class="card">🇧🇷 Foz · Bonito · Camboriú</div>
 </div>
 </section>
 
 <section id="flota">
 <h2 data-i18n="flota">Nuestra Flota</h2>
 <div class="grid">
-  <div class="card">Sedán</div>
-  <div class="card">SUV</div>
-  <div class="card">Van</div>
-  <div class="card">Minibus</div>
-  <div class="card">Bus</div>
+<div class="card">Sedán</div>
+<div class="card">SUV</div>
+<div class="card">Van</div>
+<div class="card">Minibus</div>
+<div class="card">Bus</div>
 </div>
 </section>
 
 <section id="porque">
 <h2 data-i18n="porque">¿Por qué elegirnos?</h2>
 <div class="features">
-  <div data-i18n="p1">✔ Puntualidad garantizada</div>
-  <div data-i18n="p2">✔ Choferes profesionales</div>
-  <div data-i18n="p3">✔ Vehículos modernos</div>
-  <div data-i18n="p4">✔ Atención personalizada</div>
+<div data-i18n="p1">✔ Puntualidad garantizada</div>
+<div data-i18n="p2">✔ Choferes profesionales</div>
+<div data-i18n="p3">✔ Vehículos modernos</div>
+<div data-i18n="p4">✔ Atención personalizada</div>
 </div>
 </section>
 
 <section id="contacto" class="contact">
 <h2 data-i18n="contacto">Contacto</h2>
-<p>WhatsApp +595 991 809 877</p>
+<p>📞 +595 991 809 877</p>
 <div class="socials">
-  <a href="https://www.instagram.com/asuncion_transfers">Instagram</a>
-  <a href="https://www.facebook.com/share/1DLpVWkQga/">Facebook</a>
-  <a href="https://www.tiktok.com/@asuncion_transfers">TikTok</a>
+<a href="https://www.instagram.com/asuncion_transfers" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">Facebook</a>
+<a href="https://www.tiktok.com/@asuncion_transfers" target="_blank">TikTok</a>
 </div>
 </section>
 
-<a class="whatsapp-float" href="https://wa.me/595991809877">💬</a>
+<a class="whatsapp-float" href="https://wa.me/595991809877" target="_blank">💬</a>
 
 <script>
-function toggleMenu(){document.getElementById("menu").classList.toggle("active")}
-
-const texts={
-es:{menu_inicio:"Inicio",menu_servicios:"Servicios",menu_destinos:"Destinos",menu_flota:"Vehículos",menu_porque:"Por qué elegirnos",menu_contacto:"Contacto",
-hero_title:"Traslados Premium",hero_text:"Servicio privado y profesional en Paraguay y el exterior.",cotizar:"Cotizar",
-servicios:"Servicios",aero:"Traslados al Aeropuerto",aero_desc:"Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.",
-corp:"Servicios Corporativos",corp_desc:"Movilidad ejecutiva para empresas, reuniones y traslados VIP.",
-eventos:"Eventos y Congresos",eventos_desc:"Transporte organizado para eventos, congresos y grupos.",
-turismo:"Turismo Privado",turismo_desc:"Viajes personalizados nacionales e internacionales con chofer profesional.",
-destinos:"Destinos",nac:"Nacionales",flota:"Nuestra Flota",porque:"¿Por qué elegirnos?",
-p1:"✔ Puntualidad garantizada",p2:"✔ Choferes profesionales",p3:"✔ Vehículos modernos",p4:"✔ Atención personalizada",
-contacto:"Contacto"},
-en:{menu_inicio:"Home",menu_servicios:"Services",menu_destinos:"Destinations",menu_flota:"Fleet",menu_porque:"Why us",menu_contacto:"Contact",
-hero_title:"Premium Transfers",hero_text:"Private and professional service in Paraguay and abroad.",cotizar:"Get a Quote"},
-pt:{menu_inicio:"Início",menu_servicios:"Serviços",menu_destinos:"Destinos",menu_flota:"Frota",menu_porque:"Por que escolher-nos",menu_contacto:"Contato",
-hero_title:"Traslados Premium",hero_text:"Serviço privado e profissional no Paraguai e exterior.",cotizar:"Orçar"}
+function toggleMenu(){
+ document.getElementById("menu").classList.toggle("active");
 }
 
+const texts={
+es:{menu_inicio:"Inicio",menu_servicios:"Servicios",menu_destinos:"Destinos",menu_flota:"Vehículos",menu_porque:"Por qué elegirnos",menu_contacto:"Contacto",hero_title:"Traslados Premium",hero_text:"Servicio privado y profesional en Paraguay y el exterior.",cotizar:"Cotizar",servicios:"Servicios",aero:"Traslados al Aeropuerto",aero_desc:"Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.",corp:"Servicios Corporativos",corp_desc:"Movilidad ejecutiva para empresas, reuniones, visitas y traslados VIP.",eventos:"Eventos y Congresos",eventos_desc:"Transporte organizado para eventos, congresos, bodas y grupos.",turismo:"Turismo Privado",turismo_desc:"Viajes personalizados nacionales e internacionales con chofer profesional.",destinos:"Destinos",flota:"Nuestra Flota",porque:"¿Por qué elegirnos?",p1:"✔ Puntualidad garantizada",p2:"✔ Choferes profesionales",p3:"✔ Vehículos modernos",p4:"✔ Atención personalizada",contacto:"Contacto"},
+en:{menu_inicio:"Home",menu_servicios:"Services",menu_destinos:"Destinations",menu_flota:"Vehicles",menu_porque:"Why choose us",menu_contacto:"Contact",hero_title:"Premium Transfers",hero_text:"Private and professional service in Paraguay and abroad.",cotizar:"Get a quote",servicios:"Services",aero:"Airport Transfers",aero_desc:"Door-to-door service, flight monitoring and personalized assistance.",corp:"Corporate Services",corp_desc:"Executive mobility for companies and VIP transfers.",eventos:"Events & Conferences",eventos_desc:"Organized transport for events and groups.",turismo:"Private Tourism",turismo_desc:"Customized national and international trips.",destinos:"Destinations",flota:"Our Fleet",porque:"Why choose us?",p1:"✔ Guaranteed punctuality",p2:"✔ Professional drivers",p3:"✔ Modern vehicles",p4:"✔ Personalized service",contacto:"Contact"},
+pt:{menu_inicio:"Início",menu_servicios:"Serviços",menu_destinos:"Destinos",menu_flota:"Veículos",menu_porque:"Por que escolher",menu_contacto:"Contato",hero_title:"Traslados Premium",hero_text:"Serviço privado e profissional no Paraguai e exterior.",cotizar:"Orçar",servicios:"Serviços",aero:"Traslados ao Aeroporto",aero_desc:"Serviço porta a porta com monitoramento de voos.",corp:"Serviços Corporativos",corp_desc:"Mobilidade executiva e traslados VIP.",eventos:"Eventos e Congressos",eventos_desc:"Transporte organizado para eventos.",turismo:"Turismo Privado",turismo_desc:"Viagens personalizadas.",destinos:"Destinos",flota:"Nossa Frota",porque:"Por que escolher?",p1:"✔ Pontualidade garantida",p2:"✔ Motoristas profissionais",p3:"✔ Veículos modernos",p4:"✔ Atendimento personalizado",contacto:"Contato"}
+};
+
 function setLang(lang){
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key=el.getAttribute("data-i18n")
-    if(texts[lang][key]) el.innerText=texts[lang][key]
-  })
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+  const k=el.getAttribute("data-i18n");
+  if(texts[lang][k]) el.innerText=texts[lang][k];
+ });
 }
 </script>
 
