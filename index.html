@@ -37,6 +37,11 @@ header h1{
   font-size:20px;
 }
 
+/* NAV DESKTOP */
+nav{
+  display:flex;
+}
+
 nav a{
   color:#fff;
   text-decoration:none;
@@ -48,7 +53,14 @@ nav a:hover{
   text-decoration:underline;
 }
 
-/* HERO PC */
+/* HAMBURGUESA */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
 .hero{
   min-height:100vh;
   background-image:url("sedan-premium.jpg");
@@ -82,7 +94,6 @@ nav a:hover{
   border-radius:30px;
   font-weight:bold;
   text-decoration:none;
-  display:inline-block;
 }
 
 /* SECCIONES */
@@ -111,32 +122,12 @@ section h2{
   text-align:center;
 }
 
-.card h3{
-  margin-bottom:15px;
-}
-
-.card p{
-  font-size:14px;
-  opacity:0.9;
-  margin-bottom:20px;
-}
-
-.card a{
-  background:#25D366;
-  color:#000;
-  padding:10px 20px;
-  border-radius:20px;
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* POR QUÉ ELEGIRNOS */
+/* FEATURES */
 .features{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:30px;
   text-align:center;
-  font-size:15px;
 }
 
 /* CONTACTO */
@@ -146,12 +137,11 @@ section h2{
 
 .socials a{
   margin:0 12px;
-  font-size:16px;
   color:#25D366;
   text-decoration:none;
 }
 
-/* WHATSAPP FLOTANTE */
+/* WHATSAPP */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -176,15 +166,35 @@ section h2{
     padding:15px 20px;
   }
 
+  /* OCULTAR NAV */
+  nav{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    text-align:center;
+    display:none;
+  }
+
   nav a{
-    margin-left:10px;
-    font-size:13px;
+    padding:15px 0;
+    margin:0;
+    font-size:16px;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
   }
 
   .hero{
-    min-height:100vh;
-    background-size:120%;              /* MÁS CERCA */
-    background-position:center 110px;  /* MÁS ABAJO */
+    background-size:120%;
+    background-position:center 110px;
     padding:480px 20px 40px;
   }
 
@@ -195,101 +205,45 @@ section h2{
   .hero-content h2{
     font-size:32px;
   }
-
-  .hero-content p{
-    font-size:16px;
-  }
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>Asunción Transfers</h1>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#destinos">Destinos</a>
-    <a href="#flota">Vehículos</a>
-    <a href="#porque">Por qué elegirnos</a>
-    <a href="#contacto">Contacto</a>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+    <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+    <a href="#destinos" onclick="toggleMenu()">Destinos</a>
+    <a href="#flota" onclick="toggleMenu()">Vehículos</a>
+    <a href="#porque" onclick="toggleMenu()">Por qué elegirnos</a>
+    <a href="#contacto" onclick="toggleMenu()">Contacto</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-content">
     <h2>Traslados Premium</h2>
     <p>Servicio privado y profesional en Asunción, Paraguay y viajes internacionales.</p>
-    <a class="btn" href="https://wa.me/595991809877" target="_blank">
-      Cotizar por WhatsApp
-    </a>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
   </div>
 </section>
 
-<!-- SERVICIOS -->
 <section id="servicios">
 <h2>Servicios</h2>
 <div class="grid">
-
-<div class="card">
-<h3>✈ Traslados al Aeropuerto</h3>
-<p>Puntualidad garantizada puerta a puerta.</p>
-<a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20al%20aeropuerto." target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-<h3>🏢 Viajes Corporativos</h3>
-<p>Transporte ejecutivo para empresas.</p>
-<a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20corporativo." target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-<h3>🎉 Eventos y Congresos</h3>
-<p>Movilidad profesional para eventos.</p>
-<a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20traslados%20para%20un%20evento." target="_blank">Cotizar</a>
-</div>
-
-<div class="card">
-<h3>🌎 Turismo Privado</h3>
-<p>Viajes nacionales e internacionales.</p>
-<a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20turístico." target="_blank">Cotizar</a>
-</div>
-
+<div class="card">✈ Traslados al Aeropuerto</div>
+<div class="card">🏢 Viajes Corporativos</div>
+<div class="card">🎉 Eventos y Congresos</div>
+<div class="card">🌎 Turismo Privado</div>
 </div>
 </section>
 
-<!-- DESTINOS -->
-<section id="destinos">
-<h2>Destinos</h2>
-<div class="grid">
-<div class="card">
-<h3>Nacionales</h3>
-<p>Asunción, Aeropuerto, Ciudad del Este, Encarnación y más.</p>
-</div>
-<div class="card">
-<h3>Internacionales</h3>
-<p>Argentina y Brasil: Formosa, Corrientes, Resistencia, Foz, Bonito, Camboriú.</p>
-</div>
-</div>
-</section>
-
-<!-- FLOTA -->
-<section id="flota">
-<h2>Nuestra Flota</h2>
-<div class="grid">
-<div class="card"><h3>Sedán</h3><p>Ejecutivo y confortable.</p></div>
-<div class="card"><h3>SUV</h3><p>Espacio y comodidad.</p></div>
-<div class="card"><h3>Van</h3><p>Grupos pequeños.</p></div>
-<div class="card"><h3>Minibus</h3><p>Eventos y grupos.</p></div>
-<div class="card"><h3>Bus</h3><p>Grandes delegaciones.</p></div>
-</div>
-</section>
-
-<!-- POR QUÉ -->
 <section id="porque">
 <h2>¿Por qué elegirnos?</h2>
 <div class="features">
@@ -300,19 +254,23 @@ section h2{
 </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto" class="contact">
 <h2>Contacto</h2>
-<p>📞 WhatsApp: +595 991 809 877</p>
+<p>📞 +595 991 809 877</p>
 <div class="socials">
-<a href="https://www.instagram.com/asuncion_transfers?igsh=a29xaHU3enY2N3Zx" target="_blank">Instagram</a>
+<a href="https://www.instagram.com/asuncion_transfers" target="_blank">Instagram</a>
 <a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">Facebook</a>
 <a href="https://www.tiktok.com/@asuncion_transfers" target="_blank">TikTok</a>
 </div>
 </section>
 
-<!-- WHATSAPP FLOTANTE -->
 <a class="whatsapp-float" href="https://wa.me/595991809877" target="_blank">💬</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
