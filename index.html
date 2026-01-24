@@ -46,26 +46,31 @@ nav a{
 nav a:hover{ text-decoration:underline; }
 
 /* HERO */
-.hero{
-  min-height:100vh;
-  background:url("sedan-premium.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  padding:120px 40px 40px;
-}
+@media (max-width: 768px) {
 
-.hero-content{
-  max-width:600px;
-}
+  .hero {
+    min-height: 100vh;
+    background-image: url("sedan-premium.jpg");
+    background-size: 115%;           /* imagen un poco más cerca */
+    background-position: center 80px;/* imagen más abajo */
+    background-repeat: no-repeat;
+    padding: 420px 20px 40px;
+    background-color: #000;
+  }
 
-.hero h2{
-  font-size:46px;
-  margin-bottom:20px;
-}
+  .hero-content {
+    text-align: center;
+  }
 
-.hero p{
-  font-size:18px;
-  margin-bottom:30px;
+  .hero-content h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 }
 
 .btn{
