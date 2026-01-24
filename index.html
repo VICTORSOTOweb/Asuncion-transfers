@@ -6,6 +6,7 @@
 <title>Asunción Transfers | Traslados Premium</title>
 
 <style>
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -25,7 +26,7 @@ header{
   top:0;
   width:100%;
   padding:15px 40px;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.75);
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -43,40 +44,41 @@ nav a{
   font-size:14px;
 }
 
-nav a:hover{ text-decoration:underline; }
-
-/* HERO */
-@media (max-width: 768px) {
-
-  .hero {
-    min-height: 100vh;
-    background-image: url("sedan-premium.jpg");
-    background-size: 115%;           /* imagen un poco más cerca */
-    background-position: center 80px;/* imagen más abajo */
-    background-repeat: no-repeat;
-    padding: 420px 20px 40px;
-    background-color: #000;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-content h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
+nav a:hover{
+  text-decoration:underline;
 }
 
+/* HERO PC */
+.hero{
+  min-height:100vh;
+  background-image:url("sedan-premium.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  align-items:flex-end;
+  padding:140px 40px 90px;
+}
+
+.hero-content{
+  max-width:600px;
+}
+
+.hero-content h2{
+  font-size:46px;
+  margin-bottom:15px;
+}
+
+.hero-content p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+/* BOTÓN */
 .btn{
   background:#25D366;
   color:#000;
-  padding:14px 28px;
+  padding:14px 30px;
   border-radius:30px;
   font-weight:bold;
   text-decoration:none;
@@ -85,7 +87,7 @@ nav a:hover{ text-decoration:underline; }
 
 /* SECCIONES */
 section{
-  padding:80px 40px;
+  padding:90px 40px;
 }
 
 section h2{
@@ -94,13 +96,14 @@ section h2{
   margin-bottom:50px;
 }
 
-/* CARDS */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
 
+/* CARDS */
 .card{
   background:#111;
   padding:30px;
@@ -133,6 +136,7 @@ section h2{
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:30px;
   text-align:center;
+  font-size:15px;
 }
 
 /* CONTACTO */
@@ -141,8 +145,8 @@ section h2{
 }
 
 .socials a{
-  margin:0 10px;
-  font-size:22px;
+  margin:0 12px;
+  font-size:16px;
   color:#25D366;
   text-decoration:none;
 }
@@ -154,8 +158,8 @@ section h2{
   right:20px;
   background:#25D366;
   color:#000;
-  width:55px;
-  height:55px;
+  width:58px;
+  height:58px;
   border-radius:50%;
   display:flex;
   align-items:center;
@@ -165,38 +169,44 @@ section h2{
   z-index:200;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ================= MOBILE ================= */
+@media (max-width:768px){
 
-  .hero {
-    min-height: 100vh;
-    background-image: url("sedan-premium.jpg");
-    background-size: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
-    padding: 420px 20px 40px;
-    background-color: #000;
+  header{
+    padding:15px 20px;
   }
 
-  .hero-content {
-    text-align: center;
+  nav a{
+    margin-left:10px;
+    font-size:13px;
   }
 
-  .hero-content h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
+  .hero{
+    min-height:100vh;
+    background-size:120%;              /* MÁS CERCA */
+    background-position:center 110px;  /* MÁS ABAJO */
+    padding:480px 20px 40px;
   }
 
-  .hero-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
+  .hero-content{
+    text-align:center;
   }
+
+  .hero-content h2{
+    font-size:32px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <h1>Asunción Transfers</h1>
   <nav>
@@ -214,7 +224,9 @@ section h2{
   <div class="hero-content">
     <h2>Traslados Premium</h2>
     <p>Servicio privado y profesional en Asunción, Paraguay y viajes internacionales.</p>
-    <a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+    <a class="btn" href="https://wa.me/595991809877" target="_blank">
+      Cotizar por WhatsApp
+    </a>
   </div>
 </section>
 
@@ -225,25 +237,25 @@ section h2{
 
 <div class="card">
 <h3>✈ Traslados al Aeropuerto</h3>
-<p>Servicio puerta a puerta, puntual y seguro desde y hacia el aeropuerto.</p>
+<p>Puntualidad garantizada puerta a puerta.</p>
 <a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20traslado%20al%20aeropuerto." target="_blank">Cotizar</a>
 </div>
 
 <div class="card">
 <h3>🏢 Viajes Corporativos</h3>
-<p>Transporte ejecutivo para empresas, reuniones y traslados de personal.</p>
+<p>Transporte ejecutivo para empresas.</p>
 <a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20corporativo." target="_blank">Cotizar</a>
 </div>
 
 <div class="card">
 <h3>🎉 Eventos y Congresos</h3>
-<p>Movilización profesional para eventos, ferias y congresos.</p>
+<p>Movilidad profesional para eventos.</p>
 <a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20traslados%20para%20un%20evento." target="_blank">Cotizar</a>
 </div>
 
 <div class="card">
 <h3>🌎 Turismo Privado</h3>
-<p>Viajes turísticos nacionales e internacionales con total comodidad.</p>
+<p>Viajes nacionales e internacionales.</p>
 <a href="https://wa.me/595991809877?text=Hola,%20quiero%20cotizar%20un%20viaje%20turístico." target="_blank">Cotizar</a>
 </div>
 
@@ -254,17 +266,14 @@ section h2{
 <section id="destinos">
 <h2>Destinos</h2>
 <div class="grid">
-
 <div class="card">
 <h3>Nacionales</h3>
 <p>Asunción, Aeropuerto, Ciudad del Este, Encarnación y más.</p>
 </div>
-
 <div class="card">
 <h3>Internacionales</h3>
-<p>Argentina (Formosa, Corrientes, Resistencia) y Brasil (Foz, Bonito, Camboriú).</p>
+<p>Argentina y Brasil: Formosa, Corrientes, Resistencia, Foz, Bonito, Camboriú.</p>
 </div>
-
 </div>
 </section>
 
@@ -272,23 +281,21 @@ section h2{
 <section id="flota">
 <h2>Nuestra Flota</h2>
 <div class="grid">
-
-<div class="card"><h3>Sedán</h3><p>Ideal para traslados ejecutivos.</p></div>
-<div class="card"><h3>SUV</h3><p>Confort y espacio adicional.</p></div>
+<div class="card"><h3>Sedán</h3><p>Ejecutivo y confortable.</p></div>
+<div class="card"><h3>SUV</h3><p>Espacio y comodidad.</p></div>
 <div class="card"><h3>Van</h3><p>Grupos pequeños.</p></div>
-<div class="card"><h3>Minibus</h3><p>Eventos y grupos medianos.</p></div>
-<div class="card"><h3>Bus</h3><p>Grandes grupos.</p></div>
-
+<div class="card"><h3>Minibus</h3><p>Eventos y grupos.</p></div>
+<div class="card"><h3>Bus</h3><p>Grandes delegaciones.</p></div>
 </div>
 </section>
 
-<!-- POR QUÉ ELEGIRNOS -->
+<!-- POR QUÉ -->
 <section id="porque">
 <h2>¿Por qué elegirnos?</h2>
 <div class="features">
 <div>✔ Puntualidad garantizada</div>
-<div>✔ Vehículos modernos</div>
 <div>✔ Choferes profesionales</div>
+<div>✔ Vehículos modernos</div>
 <div>✔ Atención personalizada</div>
 </div>
 </section>
