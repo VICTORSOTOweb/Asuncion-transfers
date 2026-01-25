@@ -126,9 +126,8 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
  nav a{margin:18px 0;font-size:18px}
  .menu-toggle{display:flex}
 
- /* OPCIÓN A */
  .hero{
-  padding:220px 20px 90px;          /* texto un poco más arriba */
+  padding:220px 20px 90px;
   background-size:115% auto;
   background-position:center 60px;
  }
@@ -144,9 +143,7 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
 <header>
  <h1>Asunción Transfers</h1>
  <div class="menu-toggle" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
+  <span></span><span></span><span></span>
  </div>
  <nav id="menu">
   <a data-i18n="menu_inicio" href="#inicio" onclick="closeMenu()">Inicio</a>
@@ -175,22 +172,22 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
  <div class="card">
   <h3 data-i18n="aero">Traslados al Aeropuerto</h3>
   <p data-i18n="aero_desc">Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.</p>
-  <a class="btn" href="https://wa.me/595991809877">Cotizar</a>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
  <div class="card">
   <h3 data-i18n="corp">Servicios Corporativos</h3>
   <p data-i18n="corp_desc">Movilidad ejecutiva para empresas y traslados VIP.</p>
-  <a class="btn" href="https://wa.me/595991809877">Cotizar</a>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
  <div class="card">
   <h3 data-i18n="eventos">Eventos y Congresos</h3>
   <p data-i18n="eventos_desc">Transporte organizado para eventos y grupos.</p>
-  <a class="btn" href="https://wa.me/595991809877">Cotizar</a>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
  <div class="card">
   <h3 data-i18n="turismo">Turismo Privado</h3>
   <p data-i18n="turismo_desc">Viajes personalizados nacionales e internacionales.</p>
-  <a class="btn" href="https://wa.me/595991809877">Cotizar</a>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
 </div>
 </section>
@@ -201,14 +198,17 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
  <div class="card">
   <h3>🇵🇾 Paraguay</h3>
   <p data-i18n="dest_py">Asunción · Ciudad del Este · Encarnación · y otras ciudades</p>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
  <div class="card">
   <h3>🇦🇷 Argentina</h3>
   <p data-i18n="dest_ar">Formosa · Corrientes · Resistencia · y otras ciudades</p>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
  <div class="card">
   <h3>🇧🇷 Brasil</h3>
   <p data-i18n="dest_br">Foz de Iguazú · Bonito · Camboriú · y otros destinos</p>
+  <a class="btn" href="https://wa.me/595991809877" data-i18n="cotizar">Cotizar</a>
  </div>
 </div>
 </section>
@@ -250,6 +250,103 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px}
 const menu=document.getElementById("menu");
 function toggleMenu(){menu.classList.toggle("active")}
 function closeMenu(){menu.classList.remove("active")}
+
+const texts={
+ es:{
+  menu_inicio:"Inicio",
+  menu_servicios:"Servicios",
+  menu_destinos:"Destinos",
+  menu_flota:"Vehículos",
+  menu_porque:"Por qué elegirnos",
+  menu_contacto:"Contacto",
+  hero_title:"Traslados Premium",
+  hero_text:"Servicio privado y profesional en Paraguay y el exterior.",
+  cotizar:"Cotizar",
+  servicios:"Servicios",
+  aero:"Traslados al Aeropuerto",
+  aero_desc:"Servicio puntual puerta a puerta, monitoreo de vuelos y asistencia personalizada.",
+  corp:"Servicios Corporativos",
+  corp_desc:"Movilidad ejecutiva para empresas y traslados VIP.",
+  eventos:"Eventos y Congresos",
+  eventos_desc:"Transporte organizado para eventos y grupos.",
+  turismo:"Turismo Privado",
+  turismo_desc:"Viajes personalizados nacionales e internacionales.",
+  destinos:"Destinos",
+  dest_py:"Asunción · Ciudad del Este · Encarnación · y otras ciudades",
+  dest_ar:"Formosa · Corrientes · Resistencia · y otras ciudades",
+  dest_br:"Foz de Iguazú · Bonito · Camboriú · y otros destinos",
+  flota:"Nuestra Flota",
+  porque:"¿Por qué elegirnos?",
+  p1:"✔ Puntualidad garantida",
+  p2:"✔ Choferes profesionales",
+  p3:"✔ Vehículos modernos",
+  p4:"✔ Atención personalizada",
+  contacto:"Contacto"
+ },
+ en:{
+  menu_inicio:"Home",
+  menu_servicios:"Services",
+  menu_destinos:"Destinations",
+  menu_flota:"Vehicles",
+  menu_porque:"Why choose us",
+  menu_contacto:"Contact",
+  hero_title:"Premium Transfers",
+  hero_text:"Private and professional service in Paraguay and abroad.",
+  cotizar:"Get a quote",
+  servicios:"Services",
+  aero:"Airport Transfers",
+  aero_desc:"On-time door-to-door service with flight monitoring.",
+  corp:"Corporate Services",
+  corp_desc:"Executive mobility for companies and VIP transfers.",
+  eventos:"Events & Congresses",
+  eventos_desc:"Organized transport for events and groups.",
+  turismo:"Private Tourism",
+  turismo_desc:"Customized national and international trips.",
+  destinos:"Destinations",
+  dest_py:"Asunción · Ciudad del Este · Encarnación · and other cities",
+  dest_ar:"Formosa · Corrientes · Resistencia · and other cities",
+  dest_br:"Foz do Iguaçu · Bonito · Camboriú · and other destinations",
+  flota:"Our Fleet",
+  porque:"Why choose us?",
+  p1:"✔ Guaranteed punctuality",
+  p2:"✔ Professional drivers",
+  p3:"✔ Modern vehicles",
+  p4:"✔ Personalized service",
+  contacto:"Contact"
+ },
+ pt:{
+  menu_inicio:"Início",
+  menu_servicios:"Serviços",
+  menu_destinos:"Destinos",
+  menu_flota:"Veículos",
+  menu_porque:"Por que escolher-nos",
+  menu_contacto:"Contato",
+  hero_title:"Traslados Premium",
+  hero_text:"Serviço privado e profissional no Paraguai e no exterior.",
+  cotizar:"Solicitar orçamento",
+  servicios:"Serviços",
+  aero:"Traslados ao Aeroporto",
+  aero_desc:"Serviço pontual porta a porta com monitoramento de voos.",
+  corp:"Serviços Corporativos",
+  corp_desc:"Mobilidade executiva para empresas e traslados VIP.",
+  eventos:"Eventos e Congressos",
+  eventos_desc:"Transporte organizado para eventos e grupos.",
+  turismo:"Turismo Privado",
+  turismo_desc:"Viagens personalizadas nacionais e internacionais.",
+  destinos:"Destinos",
+  dest_py:"Assunção · Ciudad del Este · Encarnación · e outras cidades",
+  dest_ar:"Formosa · Corrientes · Resistencia · e outras cidades",
+  dest_br:"Foz do Iguaçu · Bonito · Camboriú · e outros destinos",
+  flota:"Nossa Frota",
+  porque:"Por que escolher-nos?",
+  p1:"✔ Pontualidade garantida",
+  p2:"✔ Motoristas profissionais",
+  p3:"✔ Veículos modernos",
+  p4:"✔ Atendimento personalizado",
+  contacto:"Contato"
+ }
+};
+
 function setLang(lang){
  document.querySelectorAll("[data-i18n]").forEach(el=>{
   const k=el.dataset.i18n;
