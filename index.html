@@ -8,175 +8,58 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 html{scroll-behavior:smooth}
-body{
-background:#000;
-color:#fff;
-line-height:1.6
-}
+body{background:#000;color:#fff;line-height:1.6}
 
 /* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 40px;
-background:rgba(0,0,0,.9);
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000
-}
+header{position:fixed;top:0;width:100%;padding:15px 40px;background:rgba(0,0,0,.9);display:flex;justify-content:space-between;align-items:center;z-index:1000}
 nav{display:flex;align-items:center}
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:18px;
-font-size:14px;
-cursor:pointer
-}
-.menu-toggle{
-display:none;
-flex-direction:column;
-cursor:pointer
-}
-.menu-toggle span{
-height:3px;
-width:26px;
-background:#fff;
-margin:4px 0
-}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px;cursor:pointer}
+.menu-toggle{display:none;flex-direction:column;cursor:pointer}
+.menu-toggle span{height:3px;width:26px;background:#fff;margin:4px 0}
 
 /* HERO */
-.hero{
-min-height:100vh;
-background:url("sedan-premium.jpg") no-repeat center/cover;
-background-size:cover;
-display:flex;
-align-items:flex-end;
-padding:140px 40px 90px
-}
+.hero{min-height:100vh;background:url("sedan-premium.jpg") no-repeat center/cover;background-size:cover;display:flex;align-items:flex-end;padding:140px 40px 90px}
 .hero-content{max-width:600px}
 .hero-content h1{font-size:46px;margin-bottom:15px}
 .hero-content p{font-size:18px;margin-bottom:30px}
 
 /* BUTTON */
-.btn{
-background:#25D366;
-color:#000;
-padding:12px 28px;
-border-radius:30px;
-font-weight:bold;
-text-decoration:none;
-display:inline-block;
-margin-top:15px
-}
+.btn{background:#25D366;color:#000;padding:12px 28px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:15px}
 
 /* SECTIONS */
-section{
-padding:90px 40px;
-scroll-margin-top:120px
-}
-section h2{
-text-align:center;
-font-size:36px;
-margin-bottom:50px
-}
+section{padding:90px 40px;scroll-margin-top:120px}
+section h2{text-align:center;font-size:36px;margin-bottom:50px}
 
 /* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
 
 /* CARD */
-.card{
-background:#111;
-padding:35px 30px;
-border-radius:18px;
-text-align:center
-}
+.card{background:#111;padding:35px 30px;border-radius:18px;text-align:center}
 .card h3{margin:15px 0}
 
 /* FLOTA */
-.flota-icon{
-font-size:14px;
-letter-spacing:2px;
-font-weight:bold;
-color:#25D366;
-margin-bottom:10px
-}
+.flota-icon{font-size:14px;letter-spacing:2px;font-weight:bold;color:#25D366;margin-bottom:10px}
 
 /* FORM */
-.form-box{
-max-width:520px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px
-}
-.form-box input,
-.form-box textarea{
-padding:12px;
-border-radius:10px;
-border:none
-}
+.form-box{max-width:520px;margin:auto;display:flex;flex-direction:column;gap:15px}
+.form-box input,.form-box textarea{padding:12px;border-radius:10px;border:none}
 
 /* FEATURES */
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-text-align:center
-}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;text-align:center}
 
 /* SOCIAL */
-.socials a{
-margin:0 12px;
-color:#25D366;
-text-decoration:none
-}
+.socials a{margin:0 12px;color:#25D366;text-decoration:none}
 
 /* FOOTER */
-footer{
-background:#050505;
-text-align:center;
-padding:40px 20px
-}
+footer{background:#050505;text-align:center;padding:40px 20px}
 
 /* WHATSAPP FLOAT */
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:#000;
-width:58px;
-height:58px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:26px;
-text-decoration:none;
-z-index:2000
-}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#000;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;z-index:2000}
 
 /* MOBILE */
 @media(max-width:768px){
 header{padding:15px 20px}
-nav{
-position:fixed;
-top:0;
-left:-100%;
-width:100%;
-height:100vh;
-background:#000;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-transition:.3s
-}
+nav{position:fixed;top:0;left:-100%;width:100%;height:100vh;background:#000;flex-direction:column;justify-content:center;align-items:center;transition:.3s}
 nav.active{left:0}
 nav a{margin:18px 0;font-size:18px}
 .menu-toggle{display:flex}
@@ -189,9 +72,7 @@ nav a{margin:18px 0;font-size:18px}
 <body>
 <header>
 <div class="logo">Asunción Transfers</div>
-<div class="menu-toggle" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</div>
+<div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 <nav id="menu">
 <a data-i18n="menu_inicio" href="#inicio" onclick="closeMenu()">Inicio</a>
 <a data-i18n="menu_servicios" href="#servicios" onclick="closeMenu()">Servicios</a>
@@ -291,29 +172,29 @@ nav a{margin:18px 0;font-size:18px}
 </section>
 
 <section id="porque">
-<h2>Por qué elegirnos</h2>
+<h2 data-i18n="porque_title">Por qué elegirnos</h2>
 <div class="grid features">
 <div class="card">
-<h3>Seguridad</h3>
-<p>Conductores profesionales y vehículos verificados para tu tranquilidad.</p>
+<h3 data-i18n="f_seguridad">Seguridad</h3>
+<p data-i18n="f_seguridad_desc">Conductores profesionales y vehículos verificados para tu tranquilidad.</p>
 </div>
 <div class="card">
-<h3>Puntualidad</h3>
-<p>Siempre llegamos a tiempo, monitoreando tus vuelos y horarios.</p>
+<h3 data-i18n="f_puntualidad">Puntualidad</h3>
+<p data-i18n="f_puntualidad_desc">Siempre llegamos a tiempo, monitoreando tus vuelos y horarios.</p>
 </div>
 <div class="card">
-<h3>Comodidad</h3>
-<p>Vehículos premium y equipamiento de calidad para tu confort.</p>
+<h3 data-i18n="f_comodidad">Comodidad</h3>
+<p data-i18n="f_comodidad_desc">Vehículos premium y equipamiento de calidad para tu confort.</p>
 </div>
 <div class="card">
-<h3>Servicio 24/7</h3>
-<p>Atención rápida y personalizada todos los días del año.</p>
+<h3 data-i18n="f_24">Servicio 24/7</h3>
+<p data-i18n="f_24_desc">Atención rápida y personalizada todos los días del año.</p>
 </div>
 </div>
 </section>
 
 <section id="reserva">
-<h2>Reservar Transfer</h2>
+<h2 data-i18n="reserva_title">Reservar Transfer</h2>
 <form class="form-box" id="formReserva">
 <input type="text" id="nombre" placeholder="Nombre">
 <input type="number" id="pasajeros" placeholder="Cantidad de pasajeros">
@@ -367,102 +248,47 @@ let texto="Hola quiero reservar un traslado:%0A"+
 window.open("https://wa.me/595991809877?text="+texto,"_blank")
 })
 
-// Multi idioma completo y funcional
+// Multi idioma completo
 const translations = {
-"es": {}, // español ya está por defecto
+"es": {},
 "en": {
-"menu_inicio":"Home",
-"menu_servicios":"Services",
-"menu_destinos":"Destinations",
-"menu_flota":"Vehicles",
-"menu_porque":"Why choose us",
-"menu_reserva":"Booking",
-"menu_contacto":"Contact",
-"hero_title":"Private Transfers in Asunción",
-"hero_text":"Professional and private service in Paraguay and abroad",
-"cotizar":"Get Quote",
-"servicios":"Services",
-"aero":"Airport Transfers",
-"aero_desc":"Door-to-door service, flight monitoring",
-"corp":"Corporate Services",
-"corp_desc":"Executive mobility for companies",
-"eventos":"Events & Congresses",
-"eventos_desc":"Organized transport for events",
-"turismo":"Private Tourism",
-"turismo_desc":"Custom national and international trips",
-"destinos":"Destinations",
-"f_sedan":"Executive Sedan",
-"f_sedan_p1":"Up to 3 passengers",
-"f_sedan_p2":"Medium luggage",
-"f_suv":"Premium SUV",
-"f_suv_p1":"Up to 4 passengers",
-"f_suv_p2":"Large luggage",
-"f_van":"Executive Van",
-"f_van_p1":"Up to 7 passengers",
-"f_van_p2":"Ideal for groups",
-"f_minibus":"Minibus",
-"f_minibus_p1":"Up to 15 passengers",
-"f_minibus_p2":"Events and transfers",
-"f_bus":"Bus",
-"f_bus_p1":"Up to 64 passengers",
-"f_bus_p2":"Ideal for large groups and events",
-"contacto":"Contact"
+"menu_inicio":"Home","menu_servicios":"Services","menu_destinos":"Destinations","menu_flota":"Vehicles","menu_porque":"Why choose us","menu_reserva":"Booking","menu_contacto":"Contact",
+"hero_title":"Private Transfers in Asunción","hero_text":"Professional and private service in Paraguay and abroad","cotizar":"Get Quote","servicios":"Services",
+"aero":"Airport Transfers","aero_desc":"Door-to-door service, flight monitoring","corp":"Corporate Services","corp_desc":"Executive mobility for companies",
+"eventos":"Events & Congresses","eventos_desc":"Organized transport for events","turismo":"Private Tourism","turismo_desc":"Custom national and international trips",
+"destinos":"Destinations","f_sedan":"Executive Sedan","f_sedan_p1":"Up to 3 passengers","f_sedan_p2":"Medium luggage",
+"f_suv":"Premium SUV","f_suv_p1":"Up to 4 passengers","f_suv_p2":"Large luggage","f_van":"Executive Van","f_van_p1":"Up to 7 passengers","f_van_p2":"Ideal for groups",
+"f_minibus":"Minibus","f_minibus_p1":"Up to 15 passengers","f_minibus_p2":"Events and transfers","f_bus":"Bus","f_bus_p1":"Up to 64 passengers","f_bus_p2":"Ideal for large groups and events",
+"porque_title":"Why choose us","f_seguridad":"Safety","f_seguridad_desc":"Professional drivers and verified vehicles for your peace of mind.",
+"f_puntualidad":"Punctuality","f_puntualidad_desc":"We always arrive on time, monitoring your flights and schedules.",
+"f_comodidad":"Comfort","f_comodidad_desc":"Premium vehicles and quality equipment for your comfort.",
+"f_24":"24/7 Service","f_24_desc":"Fast and personalized attention every day of the year.",
+"reserva_title":"Book a Transfer","contacto":"Contact"
 },
 "pt": {
-"menu_inicio":"Início",
-"menu_servicios":"Serviços",
-"menu_destinos":"Destinos",
-"menu_flota":"Veículos",
-"menu_porque":"Por que nos escolher",
-"menu_reserva":"Reserva",
-"menu_contacto":"Contato",
-"hero_title":"Traslados Privados em Assunção",
-"hero_text":"Serviço privado e profissional no Paraguai e exterior",
-"cotizar":"Solicitar",
-"servicios":"Serviços",
-"aero":"Traslados para Aeroporto",
-"aero_desc":"Serviço porta a porta e monitoramento de voos",
-"corp":"Serviços Corporativos",
-"corp_desc":"Mobilidade executiva para empresas",
-"eventos":"Eventos & Congressos",
-"eventos_desc":"Transporte organizado para eventos",
-"turismo":"Turismo Privado",
-"turismo_desc":"Viagens personalizadas nacionais e internacionais",
-"destinos":"Destinos",
-"f_sedan":"Sedã Executivo",
-"f_sedan_p1":"Até 3 passageiros",
-"f_sedan_p2":"Bagagem média",
-"f_suv":"SUV Premium",
-"f_suv_p1":"Até 4 passageiros",
-"f_suv_p2":"Bagagem grande",
-"f_van":"Van Executiva",
-"f_van_p1":"Até 7 passageiros",
-"f_van_p2":"Ideal para grupos",
-"f_minibus":"Minibus",
-"f_minibus_p1":"Até 15 passageiros",
-"f_minibus_p2":"Eventos e traslados",
-"f_bus":"Ônibus",
-"f_bus_p1":"Até 64 passageiros",
-"f_bus_p2":"Ideal para grupos grandes e eventos",
-"contacto":"Contato"
+"menu_inicio":"Início","menu_servicios":"Serviços","menu_destinos":"Destinos","menu_flota":"Veículos","menu_porque":"Por que nos escolher","menu_reserva":"Reserva","menu_contacto":"Contato",
+"hero_title":"Traslados Privados em Assunção","hero_text":"Serviço privado e profissional no Paraguai e exterior","cotizar":"Solicitar","servicios":"Serviços",
+"aero":"Traslados para Aeroporto","aero_desc":"Serviço porta a porta e monitoramento de voos","corp":"Serviços Corporativos","corp_desc":"Mobilidade executiva para empresas",
+"eventos":"Eventos & Congressos","eventos_desc":"Transporte organizado para eventos","turismo":"Turismo Privado","turismo_desc":"Viagens personalizadas nacionais e internacionais",
+"destinos":"Destinos","f_sedan":"Sedã Executivo","f_sedan_p1":"Até 3 passageiros","f_sedan_p2":"Bagagem média",
+"f_suv":"SUV Premium","f_suv_p1":"Até 4 passageiros","f_suv_p2":"Bagagem grande","f_van":"Van Executiva","f_van_p1":"Até 7 passageiros","f_van_p2":"Ideal para grupos",
+"f_minibus":"Minibus","f_minibus_p1":"Até 15 passageiros","f_minibus_p2":"Eventos e traslados","f_bus":"Ônibus","f_bus_p1":"Até 64 passageiros","f_bus_p2":"Ideal para grupos grandes e eventos",
+"porque_title":"Por que nos escolher","f_seguridad":"Segurança","f_seguridad_desc":"Motoristas profissionais e veículos verificados para sua tranquilidade.",
+"f_puntualidad":"Pontualidade","f_puntualidad_desc":"Sempre chegamos no horário, monitorando seus voos e horários.",
+"f_comodidad":"Conforto","f_comodidad_desc":"Veículos premium e equipamentos de qualidade para seu conforto.",
+"f_24":"Serviço 24/7","f_24_desc":"Atendimento rápido e personalizado todos os dias do ano.",
+"reserva_title":"Reservar Transfer","contacto":"Contato"
 }
 };
 
 function setLang(lang){
 document.querySelectorAll("[data-i18n]").forEach(el=>{
 let key=el.getAttribute("data-i18n");
-if(lang==="es"){
-el.textContent = el.getAttribute("data-i18n-default") || el.textContent;
-}else if(translations[lang] && translations[lang][key]){
-el.textContent=translations[lang][key];
-}
+if(lang==="es"){el.textContent = el.getAttribute("data-i18n-default") || el.textContent;}
+else if(translations[lang] && translations[lang][key]){el.textContent=translations[lang][key];}
 });
 }
-
-// Guardar valores por defecto en español
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-el.setAttribute("data-i18n-default", el.textContent);
-});
+document.querySelectorAll("[data-i18n]").forEach(el=>{el.setAttribute("data-i18n-default", el.textContent);});
 </script>
 </body>
 </html>
