@@ -18,7 +18,7 @@ nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px;cursor:poi
 .menu-toggle span{height:3px;width:26px;background:#fff;margin:4px 0}
 
 /* HERO */
-.hero{min-height:100vh;background:url("sedan-premium.jpg") no-repeat center/cover;background-size:cover;display:flex;align-items:flex-end;padding:140px 40px 90px}
+.hero{min-height:100vh;background:url("sedan-premium.jpg") no-repeat center/cover;display:flex;align-items:flex-end;padding:140px 40px 90px}
 .hero-content{max-width:600px}
 .hero-content h1{font-size:46px;margin-bottom:15px}
 .hero-content p{font-size:18px;margin-bottom:30px}
@@ -63,7 +63,7 @@ nav{position:fixed;top:0;left:-100%;width:100%;height:100vh;background:#000;flex
 nav.active{left:0}
 nav a{margin:18px 0;font-size:18px}
 .menu-toggle{display:flex}
-.hero{padding:220px 20px 90px}
+.hero{padding:220px 20px 90px;background-size:cover;background-position:center}
 .hero-content{text-align:center}
 .hero-content h1{font-size:32px}
 .card h3{font-size:20px} /* Ajuste banderas y texto en móviles */
@@ -122,15 +122,15 @@ nav a{margin:18px 0;font-size:18px}
 <h2 data-i18n="destinos">Destinos</h2>
 <div class="grid">
 <div class="card">
-<h3><span>🇵🇾</span> Paraguay</h3>
+<h3>🇵🇾 Paraguay</h3>
 <p data-i18n="dest_py">Asunción · Ciudad del Este · Encarnación · y otras ciudades</p>
 </div>
 <div class="card">
-<h3><span>🇦🇷</span> Argentina</h3>
+<h3>🇦🇷 Argentina</h3>
 <p data-i18n="dest_ar">Formosa · Corrientes · Resistencia · y otras ciudades</p>
 </div>
 <div class="card">
-<h3><span>🇧🇷</span> Brasil</h3>
+<h3>🇧🇷 Brasil</h3>
 <p data-i18n="dest_br">Foz de Iguazú · Bonito · Camboriú · y otros destinos</p>
 </div>
 </div>
@@ -252,8 +252,8 @@ window.open("https://wa.me/595991809877?text="+texto,"_blank")
 // Multi idioma completo
 const translations = {
 "es": {},
-"en": { /* traducciones */ },
-"pt": { /* traducciones */ }
+"en": {},
+"pt": {}
 };
 
 function setLang(lang){
