@@ -18,7 +18,7 @@ nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px;cursor:poi
 .menu-toggle span{height:3px;width:26px;background:#fff;margin:4px 0}
 
 /* HERO */
-.hero{min-height:100vh;background:url("sedan-premium.jpg") no-repeat center/cover;background-size:cover;display:flex;align-items:flex-end;padding:140px 40px 90px}
+.hero{min-height:100vh;background:url("sedan-premium.jpg") no-repeat center/cover;display:flex;align-items:flex-end;padding:140px 40px 90px}
 .hero-content{max-width:600px}
 .hero-content h1{font-size:46px;margin-bottom:15px}
 .hero-content p{font-size:18px;margin-bottom:30px}
@@ -64,13 +64,14 @@ footer{background:#050505;text-align:center;padding:40px 20px}
   nav a{margin:18px 0;font-size:18px}
   .menu-toggle{display:flex}
 
-  /* Ajuste hero móvil */
+  /* Ajuste hero móvil mucho más alejado */
   .hero{
-    padding:120px 20px 80px; /* menos padding superior */
-    background-position: center top; /* mueve la imagen hacia arriba */
+    padding:180px 20px 120px; /* más espacio arriba y abajo */
+    background-position: center top;
+    background-size: contain; /* la imagen no se recorta ni hace zoom */
   }
   .hero-content{text-align:center}
-  .hero-content h1{font-size:32px}
+  .hero-content h1{font-size:28px}
   .hero-content p{font-size:16px}
 }
 </style>
