@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,13 +8,7 @@
 
 <title>Asunción Transfers | Traslados Privados y Premium en Paraguay</title>
 
-<meta name="description" content="Traslados privados en Asunción y Paraguay. Transfer aeropuerto Silvio Pettirossi, transporte ejecutivo, viajes corporativos y turismo premium.">
-
-<meta name="keywords" content="transfer aeropuerto Asunción, traslado Silvio Pettirossi, transporte ejecutivo Paraguay, taxi aeropuerto Asunción, transfer Paraguay">
-
-<meta property="og:title" content="Asunción Transfers">
-<meta property="og:description" content="Traslados privados y ejecutivos en Paraguay">
-<meta property="og:type" content="website">
+<meta name="description" content="Traslados privados en Asunción y Paraguay. Transfer aeropuerto Silvio Pettirossi, transporte ejecutivo y turismo premium.">
 
 <style>
 
@@ -34,16 +29,11 @@ position:fixed;
 top:0;
 width:100%;
 padding:15px 40px;
-background:rgba(0,0,0,.95);
+background:rgba(0,0,0,.9);
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000
-}
-
-.logo{
-font-weight:bold;
-font-size:18px
 }
 
 nav{
@@ -55,7 +45,8 @@ nav a{
 color:#fff;
 text-decoration:none;
 margin-left:18px;
-font-size:14px
+font-size:14px;
+cursor:pointer
 }
 
 .menu-toggle{
@@ -142,19 +133,20 @@ text-align:center
 margin:15px 0
 }
 
-/* FEATURES */
+/* FLOTA */
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-text-align:center
+.flota-icon{
+font-size:14px;
+letter-spacing:2px;
+font-weight:bold;
+color:#25D366;
+margin-bottom:10px
 }
 
 /* FORM */
 
 .form-box{
-max-width:500px;
+max-width:520px;
 margin:auto;
 display:flex;
 flex-direction:column;
@@ -166,6 +158,15 @@ gap:15px
 padding:12px;
 border-radius:10px;
 border:none
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+text-align:center
 }
 
 /* SOCIAL */
@@ -181,8 +182,7 @@ text-decoration:none
 footer{
 background:#050505;
 text-align:center;
-padding:40px 20px;
-margin-top:60px
+padding:40px 20px
 }
 
 /* WHATSAPP FLOAT */
@@ -208,9 +208,7 @@ z-index:2000
 
 @media(max-width:768px){
 
-header{
-padding:15px 20px
-}
+header{padding:15px 20px}
 
 nav{
 position:fixed;
@@ -225,30 +223,19 @@ align-items:center;
 transition:.3s
 }
 
-nav.active{
-left:0
-}
+nav.active{left:0}
 
-nav a{
-margin:18px 0;
-font-size:18px
-}
+nav a{margin:18px 0;font-size:18px}
 
-.menu-toggle{
-display:flex
-}
+.menu-toggle{display:flex}
 
 .hero{
 padding:220px 20px 90px
 }
 
-.hero-content{
-text-align:center
-}
+.hero-content{text-align:center}
 
-.hero-content h1{
-font-size:32px
-}
+.hero-content h1{font-size:32px}
 
 }
 
@@ -262,20 +249,22 @@ font-size:32px
 <div class="logo">Asunción Transfers</div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
+<span></span><span></span><span></span>
 </div>
 
 <nav id="menu">
 
-<a href="#inicio" onclick="closeMenu()">Inicio</a>
-<a href="#servicios" onclick="closeMenu()">Servicios</a>
-<a href="#destinos" onclick="closeMenu()">Destinos</a>
-<a href="#flota" onclick="closeMenu()">Vehículos</a>
-<a href="#porque" onclick="closeMenu()">Por qué elegirnos</a>
-<a href="#reserva" onclick="closeMenu()">Reserva</a>
-<a href="#contacto" onclick="closeMenu()">Contacto</a>
+<a data-i18n="menu_inicio" href="#inicio" onclick="closeMenu()">Inicio</a>
+<a data-i18n="menu_servicios" href="#servicios" onclick="closeMenu()">Servicios</a>
+<a data-i18n="menu_destinos" href="#destinos" onclick="closeMenu()">Destinos</a>
+<a data-i18n="menu_flota" href="#flota" onclick="closeMenu()">Vehículos</a>
+<a data-i18n="menu_porque" href="#porque" onclick="closeMenu()">Por qué elegirnos</a>
+<a data-i18n="menu_reserva" href="#reserva" onclick="closeMenu()">Reserva</a>
+<a data-i18n="menu_contacto" href="#contacto" onclick="closeMenu()">Contacto</a>
+
+<a onclick="setLang('es')">ES</a>
+<a onclick="setLang('en')">EN</a>
+<a onclick="setLang('pt')">PT</a>
 
 </nav>
 
@@ -285,11 +274,11 @@ font-size:32px
 
 <div class="hero-content">
 
-<h1>Traslados Privados en Asunción y todo Paraguay</h1>
+<h1 data-i18n="hero_title">Traslados Privados en Asunción</h1>
 
-<p>Servicio profesional de transfer aeropuerto, viajes ejecutivos y turismo privado.</p>
+<p data-i18n="hero_text">Servicio privado y profesional en Paraguay y el exterior.</p>
 
-<a class="btn" href="https://wa.me/595991809877" target="_blank">Cotizar por WhatsApp</a>
+<a class="btn" href="https://wa.me/595991809877" target="_blank" data-i18n="cotizar">Cotizar</a>
 
 </div>
 
@@ -297,28 +286,28 @@ font-size:32px
 
 <section id="servicios">
 
-<h2>Servicios</h2>
+<h2 data-i18n="servicios">Servicios</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Traslado Aeropuerto</h3>
-<p>Transfer privado desde y hacia el aeropuerto con monitoreo de vuelos.</p>
+<h3 data-i18n="aero">Traslados al Aeropuerto</h3>
+<p data-i18n="aero_desc">Servicio puntual puerta a puerta y monitoreo de vuelos.</p>
 </div>
 
 <div class="card">
-<h3>Servicio Corporativo</h3>
-<p>Transporte ejecutivo para empresas y eventos corporativos.</p>
+<h3 data-i18n="corp">Servicios Corporativos</h3>
+<p data-i18n="corp_desc">Movilidad ejecutiva para empresas.</p>
 </div>
 
 <div class="card">
-<h3>Eventos</h3>
-<p>Transporte para congresos, ferias y eventos especiales.</p>
+<h3 data-i18n="eventos">Eventos y Congresos</h3>
+<p data-i18n="eventos_desc">Transporte organizado para eventos.</p>
 </div>
 
 <div class="card">
-<h3>Turismo</h3>
-<p>Viajes privados por Paraguay, Argentina y Brasil.</p>
+<h3 data-i18n="turismo">Turismo Privado</h3>
+<p data-i18n="turismo_desc">Viajes personalizados nacionales e internacionales.</p>
 </div>
 
 </div>
@@ -327,23 +316,23 @@ font-size:32px
 
 <section id="destinos">
 
-<h2>Destinos Populares</h2>
+<h2 data-i18n="destinos">Destinos</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Asunción</h3>
-<p>Centro · Aeropuerto · Hoteles</p>
+<h3>🇵🇾 Paraguay</h3>
+<p data-i18n="dest_py">Asunción · Ciudad del Este · Encarnación · y otras ciudades</p>
 </div>
 
 <div class="card">
-<h3>Ciudad del Este</h3>
-<p>Transfer directo desde Asunción.</p>
+<h3>🇦🇷 Argentina</h3>
+<p data-i18n="dest_ar">Formosa · Corrientes · Resistencia · y otras ciudades</p>
 </div>
 
 <div class="card">
-<h3>Encarnación</h3>
-<p>Viajes turísticos y corporativos.</p>
+<h3>🇧🇷 Brasil</h3>
+<p data-i18n="dest_br">Foz de Iguazú · Bonito · Camboriú · y otros destinos</p>
 </div>
 
 </div>
@@ -352,44 +341,37 @@ font-size:32px
 
 <section id="flota">
 
-<h2>Nuestra Flota</h2>
+<h2 data-i18n="flota">Nuestra Flota</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Sedán Ejecutivo</h3>
-<p>Hasta 3 pasajeros</p>
+<div class="flota-icon">SEDÁN</div>
+<h3 data-i18n="f_sedan">Sedán Ejecutivo</h3>
+<p data-i18n="f_sedan_p1">Hasta 3 pasajeros</p>
+<p data-i18n="f_sedan_p2">Equipaje mediano</p>
 </div>
 
 <div class="card">
-<h3>SUV Premium</h3>
-<p>Hasta 4 pasajeros</p>
+<div class="flota-icon">SUV</div>
+<h3 data-i18n="f_suv">SUV Premium</h3>
+<p data-i18n="f_suv_p1">Hasta 4 pasajeros</p>
+<p data-i18n="f_suv_p2">Equipaje grande</p>
 </div>
 
 <div class="card">
-<h3>Van Ejecutiva</h3>
-<p>Hasta 7 pasajeros</p>
+<div class="flota-icon">VAN</div>
+<h3 data-i18n="f_van">Van Ejecutiva</h3>
+<p data-i18n="f_van_p1">Hasta 7 pasajeros</p>
+<p data-i18n="f_van_p2">Ideal para grupos</p>
 </div>
 
 <div class="card">
-<h3>Minibus</h3>
-<p>Hasta 15 pasajeros</p>
+<div class="flota-icon">MINIBUS</div>
+<h3 data-i18n="f_minibus">Minibus</h3>
+<p data-i18n="f_minibus_p1">Hasta 15 pasajeros</p>
+<p data-i18n="f_minibus_p2">Eventos y traslados</p>
 </div>
-
-</div>
-
-</section>
-
-<section id="porque">
-
-<h2>¿Por qué elegirnos?</h2>
-
-<div class="features">
-
-<div>✔ Puntualidad garantizada</div>
-<div>✔ Conductores profesionales</div>
-<div>✔ Vehículos modernos</div>
-<div>✔ Atención personalizada</div>
 
 </div>
 
@@ -402,6 +384,10 @@ font-size:32px
 <form class="form-box" id="formReserva">
 
 <input type="text" id="nombre" placeholder="Nombre">
+
+<input type="number" id="pasajeros" placeholder="Cantidad de pasajeros">
+
+<input type="number" id="maletas" placeholder="Cantidad de maletas">
 
 <input type="text" id="origen" placeholder="Lugar de recogida">
 
@@ -419,17 +405,17 @@ font-size:32px
 
 <section id="contacto">
 
-<h2>Contacto</h2>
+<h2 data-i18n="contacto">Contacto</h2>
 
 <p>📞 +595 991 809 877</p>
 
 <div class="socials">
 
-<a href="https://www.instagram.com/asuncion_transfers" target="_blank">Instagram</a>
+<a href="https://www.instagram.com/asuncion_transfers">📸 Instagram</a>
 
-<a href="https://www.facebook.com/share/1DLpVWkQga/" target="_blank">Facebook</a>
+<a href="https://www.facebook.com/share/1DLpVWkQga/">👍 Facebook</a>
 
-<a href="https://www.tiktok.com/@asuncion_transfers" target="_blank">TikTok</a>
+<a href="https://www.tiktok.com/@asuncion_transfers">🎵 TikTok</a>
 
 </div>
 
@@ -439,8 +425,6 @@ font-size:32px
 
 <p>© 2026 Asunción Transfers</p>
 
-<p>Traslados privados en Paraguay</p>
-
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/595991809877">💬</a>
@@ -449,19 +433,16 @@ font-size:32px
 
 const menu=document.getElementById("menu")
 
-function toggleMenu(){
-menu.classList.toggle("active")
-}
-
-function closeMenu(){
-menu.classList.remove("active")
-}
+function toggleMenu(){menu.classList.toggle("active")}
+function closeMenu(){menu.classList.remove("active")}
 
 document.getElementById("formReserva").addEventListener("submit",function(e){
 
 e.preventDefault()
 
 let nombre=document.getElementById("nombre").value
+let pasajeros=document.getElementById("pasajeros").value
+let maletas=document.getElementById("maletas").value
 let origen=document.getElementById("origen").value
 let destino=document.getElementById("destino").value
 let fecha=document.getElementById("fecha").value
@@ -469,6 +450,8 @@ let mensaje=document.getElementById("mensaje").value
 
 let texto="Hola quiero reservar un traslado:%0A"+
 "Nombre: "+nombre+"%0A"+
+"Pasajeros: "+pasajeros+"%0A"+
+"Maletas: "+maletas+"%0A"+
 "Origen: "+origen+"%0A"+
 "Destino: "+destino+"%0A"+
 "Fecha: "+fecha+"%0A"+
