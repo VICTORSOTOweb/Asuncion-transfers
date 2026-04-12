@@ -1,273 +1,1269 @@
-<!DOCTYPE html>  <html lang="es">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Asunción Transfers | Traslados Privados y Premium en Paraguay</title>  
-<meta name="description" content="Traslados privados en Asunción y Paraguay. Transfer aeropuerto Silvio Pettirossi, transporte ejecutivo y turismo premium.">  
-<style>  
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}  
-html{scroll-behavior:smooth}  
-body{background:#000;color:#fff;line-height:1.6}  /* HEADER */
-header{position:fixed;top:0;width:100%;padding:15px 40px;background:rgba(0,0,0,.9);display:flex;justify-content:space-between;align-items:center;z-index:1000}
-nav{display:flex;align-items:center}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px;cursor:pointer}
-.menu-toggle{display:none;flex-direction:column;cursor:pointer}
-.menu-toggle span{height:3px;width:26px;background:#fff;margin:4px 0}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Traslados privados en Asunción y Paraguay. Transfer aeropuerto Silvio Pettirossi, transporte ejecutivo y turismo premium con profesionales certificados.">
+    <meta name="keywords" content="traslados asunción, transfer aeropuerto, transporte ejecutivo paraguay, viajes privados">
+    <meta name="author" content="Asunción Transfers">
+    <meta name="theme-color" content="#25D366">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Asunción Transfers | Traslados Privados en Paraguay">
+    <meta property="og:description" content="Servicio de traslados premium en Asunción y Paraguay con conductores profesionales.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asunciontransfers.com">
+    <meta property="og:image" content="https://asunciontransfers.com/og-image.jpg">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <title>Asunción Transfers | Traslados Privados y Premium en Paraguay</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #25D366;
+            --dark: #0a0e27;
+            --darker: #050505;
+            --text: #ffffff;
+            --gray: #8b92a9;
+            --border: #1a1f35;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 40px;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), #00d9a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .lang-selector {
+            display: flex;
+            gap: 8px;
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 1px solid var(--border);
+        }
+        
+        .lang-selector a {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-selector a.active {
+            background: var(--primary);
+            color: var(--darker);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+        
+        .menu-toggle span {
+            height: 3px;
+            width: 26px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(5, 5, 5, 0.8) 100%), 
+                        url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 100 0 L 0 0 0 100' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
+            display: flex;
+            align-items: flex-end;
+            padding: 140px 40px 90px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 50%, rgba(37, 211, 102, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 30px); }
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary), #00d9a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* BUTTONS */
+        .btn {
+            background: linear-gradient(135deg, var(--primary), #00d9a3);
+            color: var(--darker);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+        
+        .btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(37, 211, 102, 0.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.2);
+        }
+        
+        /* SECTIONS */
+        section {
+            padding: 90px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        section h2 {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, var(--primary), #00d9a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        section p {
+            color: var(--gray);
+        }
+        
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+        
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(37, 211, 102, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(0, 217, 163, 0.05));
+            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.2);
+        }
+        
+        .card h3 {
+            margin: 15px 0;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        
+        .card p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .flota-icon {
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        /* FORM */
+        .form-box {
+            max-width: 520px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        
+        .form-box input,
+        .form-box textarea {
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-box input:focus,
+        .form-box textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+        }
+        
+        .form-box textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        /* SOCIALS */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .socials a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+        }
+        
+        .socials a:hover {
+            background: var(--primary);
+            color: var(--darker);
+            transform: scale(1.05);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--darker);
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+        }
+        
+        footer p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary), #00d9a3);
+            color: var(--darker);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            text-decoration: none;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s ease-in-out infinite, bounce 1s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(37, 211, 102, 0.2);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgba(37, 211, 102, 0.1);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+        
+        .faq-toggle {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        /* TESTIMONIOS */
+        .testimonial {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(37, 211, 102, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), #00d9a3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+        
+        .testimonial-info p {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .stars {
+            color: var(--primary);
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        
+        /* MOBILE */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 20px;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 14, 39, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: left 0.3s ease;
+                z-index: 999;
+                gap: 25px;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav a {
+                font-size: 18px;
+                margin: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 200px 20px 60px;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            section h2 {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .lang-selector {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                gap: 5px;
+            }
+            
+            .lang-selector a {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+        }
+        
+        /* ACCESSIBILITY */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+        
+        /* VALIDACION */
+        .form-error {
+            border-color: #ff6b6b !important;
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            font-size: 12px;
+            margin-top: -12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">🚗 Asunción Transfers</div>
+        <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu">
+            <a data-i18n="menu_inicio" href="#inicio" onclick="closeMenu()">Inicio</a>
+            <a data-i18n="menu_servicios" href="#servicios" onclick="closeMenu()">Servicios</a>
+            <a data-i18n="menu_destinos" href="#destinos" onclick="closeMenu()">Destinos</a>
+            <a data-i18n="menu_flota" href="#flota" onclick="closeMenu()">Vehículos</a>
+            <a data-i18n="menu_porque" href="#porque" onclick="closeMenu()">Por qué elegirnos</a>
+            <a data-i18n="menu_reserva" href="#reserva" onclick="closeMenu()">Reserva</a>
+            <a data-i18n="menu_faq" href="#faq" onclick="closeMenu()">Preguntas</a>
+            <a data-i18n="menu_contacto" href="#contacto" onclick="closeMenu()">Contacto</a>
+            <div class="lang-selector">
+                <a onclick="setLang('es')" class="active">ES</a>
+                <a onclick="setLang('en')">EN</a>
+                <a onclick="setLang('pt')">PT</a>
+            </div>
+        </nav>
+    </header>
 
-/* HERO */
-.hero{min-height:100vh;background:url("sedan-premium.jpg") no-repeat center/cover;background-size:cover;display:flex;align-items:flex-end;padding:140px 40px 90px}
-.hero-content{max-width:600px}
-.hero-content h1{font-size:46px;margin-bottom:15px}
-.hero-content p{font-size:18px;margin-bottom:30px}
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">Traslados Privados en Asunción</h1>
+            <p data-i18n="hero_text">Servicio privado y profesional en Paraguay y el exterior. Conductores certificados, vehículos premium, disponible 24/7.</p>
+            <a class="btn" href="https://wa.me/595991809877?text=Hola%20Asunci%C3%B3n%20Transfers%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20traslados" target="_blank" rel="noopener noreferrer" data-i18n="cotizar">💬 Cotizar Ahora</a>
+        </div>
+    </section>
 
-/* BUTTON */
-.btn{background:#25D366;color:#000;padding:12px 28px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:15px}
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2 data-i18n="servicios">Servicios Disponibles</h2>
+        <div class="grid">
+            <div class="card">
+                <div style="font-size: 40px; margin-bottom: 15px;">✈️</div>
+                <h3 data-i18n="aero">Traslados al Aeropuerto</h3>
+                <p data-i18n="aero_desc">Servicio puntual puerta a puerta, monitoreo de vuelos en tiempo real y recepción personalizada.</p>
+            </div>
+            <div class="card">
+                <div style="font-size: 40px; margin-bottom: 15px;">💼</div>
+                <h3 data-i18n="corp">Servicios Corporativos</h3>
+                <p data-i18n="corp_desc">Movilidad ejecutiva para empresas, directivos y juntas de negocios con profesionalismo certificado.</p>
+            </div>
+            <div class="card">
+                <div style="font-size: 40px; margin-bottom: 15px;">🎉</div>
+                <h3 data-i18n="eventos">Eventos y Congresos</h3>
+                <p data-i18n="eventos_desc">Transporte organizado para eventos corporativos, congresos y celebraciones especiales.</p>
+            </div>
+            <div class="card">
+                <div style="font-size: 40px; margin-bottom: 15px;">🌍</div>
+                <h3 data-i18n="turismo">Turismo Privado</h3>
+                <p data-i18n="turismo_desc">Viajes personalizados nacionales e internacionales con guía profesional incluido.</p>
+            </div>
+        </div>
+    </section>
 
-/* SECTIONS */
-section{padding:90px 40px;scroll-margin-top:120px}
-section h2{text-align:center;font-size:36px;margin-bottom:50px}
+    <!-- DESTINOS -->
+    <section id="destinos">
+        <h2 data-i18n="destinos">Destinos Disponibles</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🇵🇾 Paraguay</h3>
+                <p data-i18n="dest_py">Asunción • Ciudad del Este • Encarnación • Villarrica • Concepción • Coronel Oviedo • Y otros destinos</p>
+            </div>
+            <div class="card">
+                <h3>🇦🇷 Argentina</h3>
+                <p data-i18n="dest_ar">Formosa • Corrientes • Resistencia • Buenos Aires • Misiones • Y otras ciudades</p>
+            </div>
+            <div class="card">
+                <h3>🇧🇷 Brasil</h3>
+                <p data-i18n="dest_br">Foz de Iguazú • Bonito • Camboriú • São Paulo • Rio de Janeiro • Y otros destinos premium</p>
+            </div>
+        </div>
+    </section>
 
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    <!-- FLOTA -->
+    <section id="flota">
+        <h2 data-i18n="flota">Nuestra Flota Premium</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="flota-icon">SEDÁN EJECUTIVO</div>
+                <div style="font-size: 40px; margin-bottom: 15px;">🚙</div>
+                <h3 data-i18n="f_sedan">Sedán Ejecutivo</h3>
+                <p data-i18n="f_sedan_p1">👥 Hasta 3 pasajeros</p>
+                <p data-i18n="f_sedan_p2">🧳 Equipaje mediano</p>
+                <p style="font-size: 12px; color: var(--primary); margin-top: 10px;">Toyota Corolla • Honda Civic</p>
+            </div>
+            <div class="card">
+                <div class="flota-icon">SUV PREMIUM</div>
+                <div style="font-size: 40px; margin-bottom: 15px;">🚕</div>
+                <h3 data-i18n="f_suv">SUV Premium</h3>
+                <p data-i18n="f_suv_p1">👥 Hasta 4 pasajeros</p>
+                <p data-i18n="f_suv_p2">🧳 Equipaje grande</p>
+                <p style="font-size: 12px; color: var(--primary); margin-top: 10px;">BMW X1 • Mercedes GLE</p>
+            </div>
+            <div class="card">
+                <div class="flota-icon">VAN EJECUTIVA</div>
+                <div style="font-size: 40px; margin-bottom: 15px;">🚐</div>
+                <h3 data-i18n="f_van">Van Ejecutiva</h3>
+                <p data-i18n="f_van_p1">👥 Hasta 7 pasajeros</p>
+                <p data-i18n="f_van_p2">🧳 Ideal para grupos</p>
+                <p style="font-size: 12px; color: var(--primary); margin-top: 10px;">Mercedes V-Class • Toyota Hiace</p>
+            </div>
+            <div class="card">
+                <div class="flota-icon">MINIBUS</div>
+                <div style="font-size: 40px; margin-bottom: 15px;">🚌</div>
+                <h3 data-i18n="f_minibus">Minibus</h3>
+                <p data-i18n="f_minibus_p1">👥 Hasta 15 pasajeros</p>
+                <p data-i18n="f_minibus_p2">🎯 Eventos y traslados</p>
+                <p style="font-size: 12px; color: var(--primary); margin-top: 10px;">Microbus Premium</p>
+            </div>
+            <div class="card">
+                <div class="flota-icon">BUS COMPLETO</div>
+                <div style="font-size: 40px; margin-bottom: 15px;">🚎</div>
+                <h3 data-i18n="f_bus">Bus</h3>
+                <p data-i18n="f_bus_p1">👥 Hasta 64 pasajeros</p>
+                <p data-i18n="f_bus_p2">🏆 Ideal para grupos grandes</p>
+                <p style="font-size: 12px; color: var(--primary); margin-top: 10px;">Autobus Clima Completo</p>
+            </div>
+        </div>
+    </section>
 
-/* CARD */
-.card{background:#111;padding:35px 30px;border-radius:18px;text-align:center}
-.card h3{margin:15px 0}
+    <!-- POR QUE ELEGIRNOS -->
+    <section id="porque">
+        <h2 data-i18n="porque_title">¿Por qué elegirnos?</h2>
+        <div class="features">
+            <div class="card">
+                <div class="feature-icon">🛡️</div>
+                <h3 data-i18n="f_seguridad">Seguridad Garantizada</h3>
+                <p data-i18n="f_seguridad_desc">Conductores profesionales certificados, vehículos asegurados y verificados constantemente para tu tranquilidad.</p>
+            </div>
+            <div class="card">
+                <div class="feature-icon">⏰</div>
+                <h3 data-i18n="f_puntualidad">100% Puntualidad</h3>
+                <p data-i18n="f_puntualidad_desc">Siempre llegamos a tiempo, monitoreamos tus vuelos y horarios en tiempo real.</p>
+            </div>
+            <div class="card">
+                <div class="feature-icon">🎯</div>
+                <h3 data-i18n="f_comodidad">Máxima Comodidad</h3>
+                <p data-i18n="f_comodidad_desc">Vehículos premium con aire acondicionado, wifi, cargadores y equipamiento de calidad superior.</p>
+            </div>
+            <div class="card">
+                <div class="feature-icon">🕐</div>
+                <h3 data-i18n="f_24">Servicio 24/7</h3>
+                <p data-i18n="f_24_desc">Atención rápida y personalizada todos los días del año. WhatsApp, llamadas y chat disponibles.</p>
+            </div>
+        </div>
+    </section>
 
-/* FLOTA */
-.flota-icon{font-size:14px;letter-spacing:2px;font-weight:bold;color:#25D366;margin-bottom:10px}
+    <!-- RESERVA -->
+    <section id="reserva">
+        <h2 data-i18n="reserva_title">Reservar Transfer</h2>
+        <form class="form-box" id="formReserva">
+            <input type="text" id="nombre" placeholder="Tu nombre completo" required data-i18n-placeholder="nombre_placeholder">
+            <input type="number" id="pasajeros" placeholder="Cantidad de pasajeros" min="1" required data-i18n-placeholder="pasajeros_placeholder">
+            <input type="number" id="maletas" placeholder="Cantidad de maletas" min="0" required data-i18n-placeholder="maletas_placeholder">
+            <input type="text" id="origen" placeholder="Lugar de recogida (ej: Hotel, Aeropuerto)" required data-i18n-placeholder="origen_placeholder">
+            <input type="text" id="destino" placeholder="Destino final" required data-i18n-placeholder="destino_placeholder">
+            <input type="datetime-local" id="fecha" required data-i18n-placeholder="fecha_placeholder">
+            <textarea id="mensaje" placeholder="Notas adicionales (opcional)..." data-i18n-placeholder="mensaje_placeholder"></textarea>
+            <button type="submit" class="btn">📅 Reservar por WhatsApp</button>
+        </form>
+    </section>
 
-/* FORM */
-.form-box{max-width:520px;margin:auto;display:flex;flex-direction:column;gap:15px}
-.form-box input,.form-box textarea{padding:12px;border-radius:10px;border:none}
+    <!-- FAQ -->
+    <section id="faq">
+        <h2 data-i18n="faq_title">Preguntas Frecuentes</h2>
+        <div style="max-width: 700px; margin: 0 auto;">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q1">¿Cuál es el horario de atención?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq_a1">Estamos disponibles 24 horas, 7 días a la semana. Puedes contactarnos por WhatsApp, llamada o correo en cualquier momento.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q2">¿Cómo realizo una reserva?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq_a2">Puedes reservar completando el formulario arriba, o contactándonos directamente por WhatsApp al +595 991 809 877. Es rápido y fácil.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q3">¿Qué métodos de pago aceptan?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq_a3">Aceptamos efectivo, transferencia bancaria, tarjeta de crédito/débito, y plataformas de pago digital. Consulta con nosotros las opciones disponibles.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q4">¿Puedo cancelar una reserva?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq_a4">Sí, puedes cancelar hasta 2 horas antes del servicio sin costo adicional. Consulta nuestras políticas de cancelación.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q5">¿Ofrecen servicios internacionales?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq_a5">Sí, cubrimos Paraguay, Argentina, Brasil y otros países de Sudamérica. Contáctanos para cotizar tu viaje internacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* FEATURES */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;text-align:center}
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" style="background: linear-gradient(135deg, rgba(37, 211, 102, 0.05), rgba(5, 5, 5, 0.8));">
+        <h2 data-i18n="testimonios_title">Lo que dicen nuestros clientes</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p style="margin: 15px 0; font-style: italic;">"Excelente servicio, puntualidad garantizada. Los conductores muy profesionales y los vehículos impecables. Altamente recomendado."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MC</div>
+                    <div class="testimonial-info">
+                        <h4>María Cabrera</h4>
+                        <p>Empresaria - Asunción</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p style="margin: 15px 0; font-style: italic;">"Me trasladaron al aeropuerto y fue una experiencia premium. El auto limpio, conductor amable y llegué a tiempo. Perfecto!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JG</div>
+                    <div class="testimonial-info">
+                        <h4>Juan García</h4>
+                        <p>Viajero Frecuente</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p style="margin: 15px 0; font-style: italic;">"Organizamos el transporte para 50 personas a nuestro evento y todo salió perfecto. Gracias por la profesionalidad!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">CR</div>
+                    <div class="testimonial-info">
+                        <h4>Carlos Rodríguez</h4>
+                        <p>Gerente de Eventos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* SOCIAL */
-.socials a{margin:0 12px;color:#25D366;text-decoration:none}
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2 data-i18n="contacto">Contáctanos</h2>
+        <div style="text-align: center;">
+            <p style="font-size: 18px; margin-bottom: 30px;">
+                <strong data-i18n="contacto_whatsapp">📞 WhatsApp Oficial:</strong> <a href="https://wa.me/595991809877" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">+595 991 809 877</a>
+            </p>
+            <p style="font-size: 16px; margin-bottom: 10px;">
+                <strong data-i18n="contacto_email">📧 Email:</strong> <a href="mailto:info@asunciontransfers.com" style="color: var(--primary); text-decoration: none;">info@asunciontransfers.com</a>
+            </p>
+            <p style="font-size: 16px; margin-bottom: 30px;">
+                <strong data-i18n="contacto_ubicacion">📍 Ubicación:</strong> Asunción, Paraguay
+            </p>
+            <div class="socials">
+                <a href="https://www.instagram.com/asuncion_transfers" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+                <a href="https://www.facebook.com/asunciontransfers" target="_blank" rel="noopener noreferrer">👍 Facebook</a>
+                <a href="https://www.tiktok.com/@asuncion_transfers" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+            </div>
+        </div>
+    </section>
 
-/* FOOTER */
-footer{background:#050505;text-align:center;padding:40px 20px}
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Asunción Transfers. Todos los derechos reservados.</p>
+        <p style="font-size: 12px; margin-top: 10px;" data-i18n="footer_disclaimer">Servicio profesional de traslados privados en Paraguay. Conductores certificados • Vehículos asegurados • Disponible 24/7</p>
+    </footer>
 
-/* WHATSAPP FLOAT */
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#000;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;z-index:2000}
+    <!-- WhatsApp Flotante -->
+    <a class="whatsapp-float" href="https://wa.me/595991809877?text=Hola%20Asunci%C3%B3n%20Transfers%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20traslados" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp"
+       title="Chatear por WhatsApp">💬</a>
 
-/* MOBILE */
-@media(max-width:768px){
-header{padding:15px 20px}
-nav{position:fixed;top:0;left:-100%;width:100%;height:100vh;background:#000;flex-direction:column;justify-content:center;align-items:center;transition:.3s}
-nav.active{left:0}
-nav a{margin:18px 0;font-size:18px}
-.menu-toggle{display:flex}
-.hero{padding:220px 20px 90px}
-.hero-content{text-align:center}
-.hero-content h1{font-size:32px}
-}
-</style>
-
-</head>  
-<body>  
-<header>  
-<div class="logo">Asunción Transfers</div>  
-<div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>  
-<nav id="menu">  
-<a data-i18n="menu_inicio" href="#inicio" onclick="closeMenu()">Inicio</a>  
-<a data-i18n="menu_servicios" href="#servicios" onclick="closeMenu()">Servicios</a>  
-<a data-i18n="menu_destinos" href="#destinos" onclick="closeMenu()">Destinos</a>  
-<a data-i18n="menu_flota" href="#flota" onclick="closeMenu()">Vehículos</a>  
-<a data-i18n="menu_porque" href="#porque" onclick="closeMenu()">Por qué elegirnos</a>  
-<a data-i18n="menu_reserva" href="#reserva" onclick="closeMenu()">Reserva</a>  
-<a data-i18n="menu_contacto" href="#contacto" onclick="closeMenu()">Contacto</a>  
-<a onclick="setLang('es')">ES</a>  
-<a onclick="setLang('en')">EN</a>  
-<a onclick="setLang('pt')">PT</a>  
-</nav>  
-</header>  <section class="hero" id="inicio">  
-<div class="hero-content">  
-<h1 data-i18n="hero_title">Traslados Privados en Asunción</h1>  
-<p data-i18n="hero_text">Servicio privado y profesional en Paraguay y el exterior.</p>  
-<a class="btn" href="https://wa.me/595991809877" target="_blank" data-i18n="cotizar">Cotizar</a>  
-</div>  
-</section>  <section id="servicios">  
-<h2 data-i18n="servicios">Servicios</h2>  
-<div class="grid">  
-<div class="card">  
-<h3 data-i18n="aero">Traslados al Aeropuerto</h3>  
-<p data-i18n="aero_desc">Servicio puntual puerta a puerta y monitoreo de vuelos.</p>  
-</div>  
-<div class="card">  
-<h3 data-i18n="corp">Servicios Corporativos</h3>  
-<p data-i18n="corp_desc">Movilidad ejecutiva para empresas.</p>  
-</div>  
-<div class="card">  
-<h3 data-i18n="eventos">Eventos y Congresos</h3>  
-<p data-i18n="eventos_desc">Transporte organizado para eventos.</p>  
-</div>  
-<div class="card">  
-<h3 data-i18n="turismo">Turismo Privado</h3>  
-<p data-i18n="turismo_desc">Viajes personalizados nacionales e internacionales.</p>  
-</div>  
-</div>  
-</section>  <section id="destinos">  
-<h2 data-i18n="destinos">Destinos</h2>  
-<div class="grid">  
-<div class="card">  
-<h3>🇵🇾 Paraguay</h3>  
-<p data-i18n="dest_py">Asunción · Ciudad del Este · Encarnación · y otras ciudades</p>  
-</div>  
-<div class="card">  
-<h3>🇦🇷 Argentina</h3>  
-<p data-i18n="dest_ar">Formosa · Corrientes · Resistencia · y otras ciudades</p>  
-</div>  
-<div class="card">  
-<h3>🇧🇷 Brasil</h3>  
-<p data-i18n="dest_br">Foz de Iguazú · Bonito · Camboriú · y otros destinos</p>  
-</div>  
-</div>  
-</section>  <section id="flota">  
-<h2 data-i18n="flota">Nuestra Flota</h2>  
-<div class="grid">  
-<div class="card">  
-<div class="flota-icon">SEDÁN</div>  
-<h3 data-i18n="f_sedan">Sedán Ejecutivo</h3>  
-<p data-i18n="f_sedan_p1">Hasta 3 pasajeros</p>  
-<p data-i18n="f_sedan_p2">Equipaje mediano</p>  
-</div>  
-<div class="card">  
-<div class="flota-icon">SUV</div>  
-<h3 data-i18n="f_suv">SUV Premium</h3>  
-<p data-i18n="f_suv_p1">Hasta 4 pasajeros</p>  
-<p data-i18n="f_suv_p2">Equipaje grande</p>  
-</div>  
-<div class="card">  
-<div class="flota-icon">VAN</div>  
-<h3 data-i18n="f_van">Van Ejecutiva</h3>  
-<p data-i18n="f_van_p1">Hasta 7 pasajeros</p>  
-<p data-i18n="f_van_p2">Ideal para grupos</p>  
-</div>  
-<div class="card">  
-<div class="flota-icon">MINIBUS</div>  
-<h3 data-i18n="f_minibus">Minibus</h3>  
-<p data-i18n="f_minibus_p1">Hasta 15 pasajeros</p>  
-<p data-i18n="f_minibus_p2">Eventos y traslados</p>  
-</div>  
-<div class="card">  
-<div class="flota-icon">BUS</div>  
-<h3 data-i18n="f_bus">Bus</h3>  
-<p data-i18n="f_bus_p1">Hasta 64 pasajeros</p>  
-<p data-i18n="f_bus_p2">Ideal para grupos grandes y eventos</p>  
-</div>  
-</div>  
-</section>  <section id="porque">  
-<h2 data-i18n="porque_title">Por qué elegirnos</h2>  
-<div class="grid features">  
-<div class="card">  
-<h3 data-i18n="f_seguridad">Seguridad</h3>  
-<p data-i18n="f_seguridad_desc">Conductores profesionales y vehículos verificados para tu tranquilidad.</p>  
-</div>  
-<div class="card">  
-<h3 data-i18n="f_puntualidad">Puntualidad</h3>  
-<p data-i18n="f_puntualidad_desc">Siempre llegamos a tiempo, monitoreando tus vuelos y horarios.</p>  
-</div>  
-<div class="card">  
-<h3 data-i18n="f_comodidad">Comodidad</h3>  
-<p data-i18n="f_comodidad_desc">Vehículos premium y equipamiento de calidad para tu confort.</p>  
-</div>  
-<div class="card">  
-<h3 data-i18n="f_24">Servicio 24/7</h3>  
-<p data-i18n="f_24_desc">Atención rápida y personalizada todos los días del año.</p>  
-</div>  
-</div>  
-</section>  <section id="reserva">  
-<h2 data-i18n="reserva_title">Reservar Transfer</h2>  
-<form class="form-box" id="formReserva">  
-<input type="text" id="nombre" placeholder="Nombre">  
-<input type="number" id="pasajeros" placeholder="Cantidad de pasajeros">  
-<input type="number" id="maletas" placeholder="Cantidad de maletas">  
-<input type="text" id="origen" placeholder="Lugar de recogida">  
-<input type="text" id="destino" placeholder="Destino">  
-<input type="date" id="fecha">  
-<textarea id="mensaje" placeholder="Mensaje adicional"></textarea>  
-<button class="btn">Reservar por WhatsApp</button>  
-</form>  
-</section>  <section id="contacto">  
-<h2 data-i18n="contacto">Contacto</h2>  
-<p>📞 +595 991 809 877</p>  
-<div class="socials">  
-<a href="https://www.instagram.com/asuncion_transfers">📸 Instagram</a>  
-<a href="https://www.facebook.com/share/1DLpVWkQga/">👍 Facebook</a>  
-<a href="https://www.tiktok.com/@asuncion_transfers">🎵 TikTok</a>  
-</div>  
-</section>  <footer>  
-<p>© 2026 Asunción Transfers</p>  
-</footer>  
-<a class="whatsapp-float" href="https://wa.me/595991809877">💬</a>  <script>  
-const menu=document.getElementById("menu")  
-function toggleMenu(){menu.classList.toggle("active")}  
-function closeMenu(){menu.classList.remove("active")}  
-  
-// WhatsApp reserva  
-document.getElementById("formReserva").addEventListener("submit",function(e){  
-e.preventDefault()  
-let nombre=document.getElementById("nombre").value  
-let pasajeros=document.getElementById("pasajeros").value  
-let maletas=document.getElementById("maletas").value  
-let origen=document.getElementById("origen").value  
-let destino=document.getElementById("destino").value  
-let fecha=document.getElementById("fecha").value  
-let mensaje=document.getElementById("mensaje").value  
-let texto="Hola quiero reservar un traslado:%0A"+  
-"Nombre: "+nombre+"%0A"+  
-"Pasajeros: "+pasajeros+"%0A"+  
-"Maletas: "+maletas+"%0A"+  
-"Origen: "+origen+"%0A"+  
-"Destino: "+destino+"%0A"+  
-"Fecha: "+fecha+"%0A"+  
-"Mensaje: "+mensaje  
-window.open("https://wa.me/595991809877?text="+texto,"_blank")  
-})  
-  
-// Multi idioma completo  
-const translations = {  
-"es": {},  
-"en": {  
-"menu_inicio":"Home","menu_servicios":"Services","menu_destinos":"Destinations","menu_flota":"Vehicles","menu_porque":"Why choose us","menu_reserva":"Booking","menu_contacto":"Contact",  
-"hero_title":"Private Transfers in Asunción","hero_text":"Professional and private service in Paraguay and abroad","cotizar":"Get Quote","servicios":"Services",  
-"aero":"Airport Transfers","aero_desc":"Door-to-door service, flight monitoring","corp":"Corporate Services","corp_desc":"Executive mobility for companies",  
-"eventos":"Events & Congresses","eventos_desc":"Organized transport for events","turismo":"Private Tourism","turismo_desc":"Custom national and international trips",  
-"destinos":"Destinations","f_sedan":"Executive Sedan","f_sedan_p1":"Up to 3 passengers","f_sedan_p2":"Medium luggage",  
-"f_suv":"Premium SUV","f_suv_p1":"Up to 4 passengers","f_suv_p2":"Large luggage","f_van":"Executive Van","f_van_p1":"Up to 7 passengers","f_van_p2":"Ideal for groups",  
-"f_minibus":"Minibus","f_minibus_p1":"Up to 15 passengers","f_minibus_p2":"Events and transfers","f_bus":"Bus","f_bus_p1":"Up to 64 passengers","f_bus_p2":"Ideal for large groups and events",  
-"porque_title":"Why choose us","f_seguridad":"Safety","f_seguridad_desc":"Professional drivers and verified vehicles for your peace of mind.",  
-"f_puntualidad":"Punctuality","f_puntualidad_desc":"We always arrive on time, monitoring your flights and schedules.",  
-"f_comodidad":"Comfort","f_comodidad_desc":"Premium vehicles and quality equipment for your comfort.",  
-"f_24":"24/7 Service","f_24_desc":"Fast and personalized attention every day of the year.",  
-"reserva_title":"Book a Transfer","contacto":"Contact"  
-},  
-"pt": {  
-"menu_inicio":"Início","menu_servicios":"Serviços","menu_destinos":"Destinos","menu_flota":"Veículos","menu_porque":"Por que nos escolher","menu_reserva":"Reserva","menu_contacto":"Contato",  
-"hero_title":"Traslados Privados em Assunção","hero_text":"Serviço privado e profissional no Paraguai e exterior","cotizar":"Solicitar","servicios":"Serviços",  
-"aero":"Traslados para Aeroporto","aero_desc":"Serviço porta a porta e monitoramento de voos","corp":"Serviços Corporativos","corp_desc":"Mobilidade executiva para empresas",  
-"eventos":"Eventos & Congressos","eventos_desc":"Transporte organizado para eventos","turismo":"Turismo Privado","turismo_desc":"Viagens personalizadas nacionais e internacionais",  
-"destinos":"Destinos","f_sedan":"Sedã Executivo","f_sedan_p1":"Até 3 passageiros","f_sedan_p2":"Bagagem média",  
-"f_suv":"SUV Premium","f_suv_p1":"Até 4 passageiros","f_suv_p2":"Bagagem grande","f_van":"Van Executiva","f_van_p1":"Até 7 passageiros","f_van_p2":"Ideal para grupos",  
-"f_minibus":"Minibus","f_minibus_p1":"Até 15 passageiros","f_minibus_p2":"Eventos e traslados","f_bus":"Ônibus","f_bus_p1":"Até 64 passageiros","f_bus_p2":"Ideal para grupos grandes e eventos",  
-"porque_title":"Por que nos escolher","f_seguridad":"Segurança","f_seguridad_desc":"Motoristas profissionais e veículos verificados para sua tranquilidade.",  
-"f_puntualidad":"Pontualidade","f_puntualidad_desc":"Sempre chegamos no horário, monitorando seus voos e horários.",  
-"f_comodidad":"Conforto","f_comodidad_desc":"Veículos premium e equipamentos de qualidade para seu conforto.",  
-"f_24":"Serviço 24/7","f_24_desc":"Atendimento rápido e personalizado todos os dias do ano.",  
-"reserva_title":"Reservar Transfer","contacto":"Contato"  
-}  
-};  
-  
-function setLang(lang){  
-document.querySelectorAll("[data-i18n]").forEach(el=>{  
-let key=el.getAttribute("data-i18n");  
-if(lang==="es"){el.textContent = el.getAttribute("data-i18n-default") || el.textContent;}  
-else if(translations[lang] && translations[lang][key]){el.textContent=translations[lang][key];}  
-});  
-}  
-document.querySelectorAll("[data-i18n]").forEach(el=>{el.setAttribute("data-i18n-default", el.textContent);});  
-</script>  </body>  
-</html>
+    <script>
+        // MENU TOGGLE
+        const menu = document.getElementById("menu");
+        const menuToggle = document.querySelector(".menu-toggle");
+        
+        function toggleMenu() {
+            menu.classList.toggle("active");
+        }
+        
+        function closeMenu() {
+            menu.classList.remove("active");
+        }
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll("nav a[href^='#']").forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+        
+        // FORMULARIO RESERVA CON VALIDACIÓN
+        document.getElementById("formReserva").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById("nombre").value.trim();
+            const pasajeros = document.getElementById("pasajeros").value;
+            const maletas = document.getElementById("maletas").value;
+            const origen = document.getElementById("origen").value.trim();
+            const destino = document.getElementById("destino").value.trim();
+            const fecha = document.getElementById("fecha").value;
+            const mensaje = document.getElementById("mensaje").value.trim();
+            
+            // Validación básica
+            if (!nombre || !pasajeros || !origen || !destino || !fecha) {
+                alert("Por favor, completa todos los campos requeridos.");
+                return;
+            }
+            
+            // Formatear fecha
+            const fechaObj = new Date(fecha);
+            const fechaFormato = fechaObj.toLocaleDateString("es-ES") + " " + fechaObj.toLocaleTimeString("es-ES", {hour: '2-digit', minute: '2-digit'});
+            
+            // Crear mensaje
+            let texto = `Hola, quisiera realizar una reserva:\n\n`;
+            texto += `👤 *Nombre:* ${nombre}\n`;
+            texto += `👥 *Pasajeros:* ${pasajeros}\n`;
+            texto += `🧳 *Maletas:* ${maletas}\n`;
+            texto += `📍 *Origen:* ${origen}\n`;
+            texto += `📍 *Destino:* ${destino}\n`;
+            texto += `📅 *Fecha y hora:* ${fechaFormato}\n`;
+            if (mensaje) {
+                texto += `💬 *Nota adicional:* ${mensaje}\n`;
+            }
+            
+            // Codificar y abrir WhatsApp
+            const textoEncoded = encodeURIComponent(texto);
+            window.open(`https://wa.me/595991809877?text=${textoEncoded}`, "_blank");
+            
+            // Limpiar formulario
+            document.getElementById("formReserva").reset();
+        });
+        
+        // FAQ TOGGLE
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const allFaqs = document.querySelectorAll(".faq-item");
+            
+            allFaqs.forEach(faq => {
+                if (faq !== faqItem) {
+                    faq.classList.remove("active");
+                }
+            });
+            
+            faqItem.classList.toggle("active");
+        }
+        
+        // IDIOMAS - TRADUCCIÓN COMPLETA
+        const translations = {
+            "es": {
+                "menu_inicio": "Inicio",
+                "menu_servicios": "Servicios",
+                "menu_destinos": "Destinos",
+                "menu_flota": "Vehículos",
+                "menu_porque": "Por qué elegirnos",
+                "menu_reserva": "Reserva",
+                "menu_faq": "Preguntas",
+                "menu_contacto": "Contacto",
+                "hero_title": "Traslados Privados en Asunción",
+                "hero_text": "Servicio privado y profesional en Paraguay y el exterior. Conductores certificados, vehículos premium, disponible 24/7.",
+                "cotizar": "💬 Cotizar Ahora",
+                "servicios": "Servicios Disponibles",
+                "aero": "Traslados al Aeropuerto",
+                "aero_desc": "Servicio puntual puerta a puerta, monitoreo de vuelos en tiempo real y recepción personalizada.",
+                "corp": "Servicios Corporativos",
+                "corp_desc": "Movilidad ejecutiva para empresas, directivos y juntas de negocios con profesionalismo certificado.",
+                "eventos": "Eventos y Congresos",
+                "eventos_desc": "Transporte organizado para eventos corporativos, congresos y celebraciones especiales.",
+                "turismo": "Turismo Privado",
+                "turismo_desc": "Viajes personalizados nacionales e internacionales con guía profesional incluido.",
+                "destinos": "Destinos Disponibles",
+                "dest_py": "Asunción • Ciudad del Este • Encarnación • Villarrica • Concepción • Coronel Oviedo • Y otros destinos",
+                "dest_ar": "Formosa • Corrientes • Resistencia • Buenos Aires • Misiones • Y otras ciudades",
+                "dest_br": "Foz de Iguazú • Bonito • Camboriú • São Paulo • Rio de Janeiro • Y otros destinos premium",
+                "flota": "Nuestra Flota Premium",
+                "f_sedan": "Sedán Ejecutivo",
+                "f_sedan_p1": "👥 Hasta 3 pasajeros",
+                "f_sedan_p2": "🧳 Equipaje mediano",
+                "f_suv": "SUV Premium",
+                "f_suv_p1": "👥 Hasta 4 pasajeros",
+                "f_suv_p2": "🧳 Equipaje grande",
+                "f_van": "Van Ejecutiva",
+                "f_van_p1": "👥 Hasta 7 pasajeros",
+                "f_van_p2": "🧳 Ideal para grupos",
+                "f_minibus": "Minibus",
+                "f_minibus_p1": "👥 Hasta 15 pasajeros",
+                "f_minibus_p2": "🎯 Eventos y traslados",
+                "f_bus": "Bus",
+                "f_bus_p1": "👥 Hasta 64 pasajeros",
+                "f_bus_p2": "🏆 Ideal para grupos grandes",
+                "porque_title": "¿Por qué elegirnos?",
+                "f_seguridad": "Seguridad Garantizada",
+                "f_seguridad_desc": "Conductores profesionales certificados, vehículos asegurados y verificados constantemente para tu tranquilidad.",
+                "f_puntualidad": "100% Puntualidad",
+                "f_puntualidad_desc": "Siempre llegamos a tiempo, monitoreamos tus vuelos y horarios en tiempo real.",
+                "f_comodidad": "Máxima Comodidad",
+                "f_comodidad_desc": "Vehículos premium con aire acondicionado, wifi, cargadores y equipamiento de calidad superior.",
+                "f_24": "Servicio 24/7",
+                "f_24_desc": "Atención rápida y personalizada todos los días del año. WhatsApp, llamadas y chat disponibles.",
+                "reserva_title": "Reservar Transfer",
+                "faq_title": "Preguntas Frecuentes",
+                "faq_q1": "¿Cuál es el horario de atención?",
+                "faq_a1": "Estamos disponibles 24 horas, 7 días a la semana. Puedes contactarnos por WhatsApp, llamada o correo en cualquier momento.",
+                "faq_q2": "¿Cómo realizo una reserva?",
+                "faq_a2": "Puedes reservar completando el formulario arriba, o contactándonos directamente por WhatsApp al +595 991 809 877. Es rápido y fácil.",
+                "faq_q3": "¿Qué métodos de pago aceptan?",
+                "faq_a3": "Aceptamos efectivo, transferencia bancaria, tarjeta de crédito/débito, y plataformas de pago digital. Consulta con nosotros las opciones disponibles.",
+                "faq_q4": "¿Puedo cancelar una reserva?",
+                "faq_a4": "Sí, puedes cancelar hasta 2 horas antes del servicio sin costo adicional. Consulta nuestras políticas de cancelación.",
+                "faq_q5": "¿Ofrecen servicios internacionales?",
+                "faq_a5": "Sí, cubrimos Paraguay, Argentina, Brasil y otros países de Sudamérica. Contáctanos para cotizar tu viaje internacional.",
+                "testimonios_title": "Lo que dicen nuestros clientes",
+                "contacto": "Contáctanos",
+                "contacto_whatsapp": "📞 WhatsApp Oficial:",
+                "contacto_email": "📧 Email:",
+                "contacto_ubicacion": "📍 Ubicación:",
+                "footer_disclaimer": "Servicio profesional de traslados privados en Paraguay. Conductores certificados • Vehículos asegurados • Disponible 24/7"
+            },
+            "en": {
+                "menu_inicio": "Home",
+                "menu_servicios": "Services",
+                "menu_destinos": "Destinations",
+                "menu_flota": "Vehicles",
+                "menu_porque": "Why choose us",
+                "menu_reserva": "Booking",
+                "menu_faq": "FAQ",
+                "menu_contacto": "Contact",
+                "hero_title": "Private Transfers in Asunción",
+                "hero_text": "Professional and private service in Paraguay and abroad. Certified drivers, premium vehicles, available 24/7.",
+                "cotizar": "💬 Get Quote",
+                "servicios": "Available Services",
+                "aero": "Airport Transfers",
+                "aero_desc": "Door-to-door service, real-time flight monitoring and personalized reception.",
+                "corp": "Corporate Services",
+                "corp_desc": "Executive mobility for companies, executives and business meetings with certified professionalism.",
+                "eventos": "Events & Congresses",
+                "eventos_desc": "Organized transport for corporate events, congresses and special celebrations.",
+                "turismo": "Private Tourism",
+                "turismo_desc": "Customized national and international trips with professional guide included.",
+                "destinos": "Available Destinations",
+                "dest_py": "Asunción • Ciudad del Este • Encarnación • Villarrica • Concepción • Coronel Oviedo • And other destinations",
+                "dest_ar": "Formosa • Corrientes • Resistencia • Buenos Aires • Misiones • And other cities",
+                "dest_br": "Foz de Iguazu • Bonito • Camboriu • São Paulo • Rio de Janeiro • And other premium destinations",
+                "flota": "Our Premium Fleet",
+                "f_sedan": "Executive Sedan",
+                "f_sedan_p1": "👥 Up to 3 passengers",
+                "f_sedan_p2": "🧳 Medium luggage",
+                "f_suv": "Premium SUV",
+                "f_suv_p1": "👥 Up to 4 passengers",
+                "f_suv_p2": "🧳 Large luggage",
+                "f_van": "Executive Van",
+                "f_van_p1": "👥 Up to 7 passengers",
+                "f_van_p2": "🧳 Ideal for groups",
+                "f_minibus": "Minibus",
+                "f_minibus_p1": "👥 Up to 15 passengers",
+                "f_minibus_p2": "🎯 Events and transfers",
+                "f_bus": "Bus",
+                "f_bus_p1": "👥 Up to 64 passengers",
+                "f_bus_p2": "🏆 Ideal for large groups",
+                "porque_title": "Why choose us?",
+                "f_seguridad": "Guaranteed Safety",
+                "f_seguridad_desc": "Certified professional drivers, insured and constantly verified vehicles for your peace of mind.",
+                "f_puntualidad": "100% Punctuality",
+                "f_puntualidad_desc": "We always arrive on time, monitoring your flights and schedules in real time.",
+                "f_comodidad": "Maximum Comfort",
+                "f_comodidad_desc": "Premium vehicles with air conditioning, WiFi, chargers and superior quality equipment.",
+                "f_24": "24/7 Service",
+                "f_24_desc": "Fast and personalized attention every day of the year. WhatsApp, calls and chat available.",
+                "reserva_title": "Book a Transfer",
+                "faq_title": "Frequently Asked Questions",
+                "faq_q1": "What is your service hours?",
+                "faq_a1": "We are available 24 hours, 7 days a week. You can contact us via WhatsApp, call or email at any time.",
+                "faq_q2": "How do I make a reservation?",
+                "faq_a2": "You can book by completing the form above, or contact us directly via WhatsApp at +595 991 809 877. It's quick and easy.",
+                "faq_q3": "What payment methods do you accept?",
+                "faq_a3": "We accept cash, bank transfer, credit/debit card, and digital payment platforms. Check with us for available options.",
+                "faq_q4": "Can I cancel a reservation?",
+                "faq_a4": "Yes, you can cancel up to 2 hours before the service at no additional cost. Check our cancellation policies.",
+                "faq_q5": "Do you offer international services?",
+                "faq_a5": "Yes, we cover Paraguay, Argentina, Brazil and other South American countries. Contact us to quote your international trip.",
+                "testimonios_title": "What our clients say",
+                "contacto": "Contact Us",
+                "contacto_whatsapp": "📞 Official WhatsApp:",
+                "contacto_email": "📧 Email:",
+                "contacto_ubicacion": "📍 Location:",
+                "footer_disclaimer": "Professional private transfer service in Paraguay. Certified drivers • Insured vehicles • Available 24/7"
+            },
+            "pt": {
+                "menu_inicio": "Início",
+                "menu_servicios": "Serviços",
+                "menu_destinos": "Destinos",
+                "menu_flota": "Veículos",
+                "menu_porque": "Por que nos escolher",
+                "menu_reserva": "Reserva",
+                "menu_faq": "Perguntas",
+                "menu_contacto": "Contato",
+                "hero_title": "Traslados Privados em Assunção",
+                "hero_text": "Serviço privado e profissional no Paraguai e exterior. Motoristas certificados, veículos premium, disponível 24/7.",
+                "cotizar": "💬 Solicitar Orçamento",
+                "servicios": "Serviços Disponíveis",
+                "aero": "Traslados para Aeroporto",
+                "aero_desc": "Serviço porta a porta, monitoramento de voos em tempo real e recepção personalizada.",
+                "corp": "Serviços Corporativos",
+                "corp_desc": "Mobilidade executiva para empresas, executivos e reuniões de negócios com profissionalismo certificado.",
+                "eventos": "Eventos & Congressos",
+                "eventos_desc": "Transporte organizado para eventos corporativos, congressos e celebrações especiais.",
+                "turismo": "Turismo Privado",
+                "turismo_desc": "Viagens personalizadas nacionais e internacionais com guia profissional incluído.",
+                "destinos": "Destinos Disponíveis",
+                "dest_py": "Assunção • Cidade do Leste • Encarnação • Villarrica • Concepción • Coronel Oviedo • E outros destinos",
+                "dest_ar": "Formosa • Corrientes • Resistência • Buenos Aires • Misiones • E outras cidades",
+                "dest_br": "Foz do Iguazu • Bonito • Camboriú • São Paulo • Rio de Janeiro • E outros destinos premium",
+                "flota": "Nossa Frota Premium",
+                "f_sedan": "Sedã Executivo",
+                "f_sedan_p1": "👥 Até 3 passageiros",
+                "f_sedan_p2": "🧳 Bagagem média",
+                "f_suv": "SUV Premium",
+                "f_suv_p1": "👥 Até 4 passageiros",
+                "f_suv_p2": "🧳 Bagagem grande",
+                "f_van": "Van Executiva",
+                "f_van_p1": "👥 Até 7 passageiros",
+                "f_van_p2": "🧳 Ideal para grupos",
+                "f_minibus": "Minibus",
+                "f_minibus_p1": "👥 Até 15 passageiros",
+                "f_minibus_p2": "🎯 Eventos e traslados",
+                "f_bus": "Ônibus",
+                "f_bus_p1": "👥 Até 64 passageiros",
+                "f_bus_p2": "🏆 Ideal para grupos grandes",
+                "porque_title": "Por que nos escolher?",
+                "f_seguridad": "Segurança Garantida",
+                "f_seguridad_desc": "Motoristas profissionais certificados, veículos segurados e verificados constantemente para sua tranquilidade.",
+                "f_puntualidad": "100% Pontualidade",
+                "f_puntualidad_desc": "Sempre chegamos no horário, monitorando seus voos e cronogramas em tempo real.",
+                "f_comodidad": "Máximo Conforto",
+                "f_comodidad_desc": "Veículos premium com ar condicionado, WiFi, carregadores e equipamentos de qualidade superior.",
+                "f_24": "Serviço 24/7",
+                "f_24_desc": "Atendimento rápido e personalizado todos os dias do ano. WhatsApp, chamadas e chat disponíveis.",
+                "reserva_title": "Reservar Traslado",
+                "faq_title": "Perguntas Frequentes",
+                "faq_q1": "Qual é o horário de atendimento?",
+                "faq_a1": "Estamos disponíveis 24 horas, 7 dias por semana. Você pode nos contatar via WhatsApp, chamada ou e-mail a qualquer momento.",
+                "faq_q2": "Como faço uma reserva?",
+                "faq_a2": "Você pode reservar preenchendo o formulário acima ou nos contatando diretamente via WhatsApp em +595 991 809 877. É rápido e fácil.",
+                "faq_q3": "Quais métodos de pagamento vocês aceitam?",
+                "faq_a3": "Aceitamos dinheiro, transferência bancária, cartão de crédito/débito e plataformas de pagamento digital. Verifique conosco as opções disponíveis.",
+                "faq_q4": "Posso cancelar uma reserva?",
+                "faq_a4": "Sim, você pode cancelar até 2 horas antes do serviço sem custo adicional. Verifique nossas políticas de cancelamento.",
+                "faq_q5": "Vocês oferecem serviços internacionais?",
+                "faq_a5": "Sim, cobrimos Paraguai, Argentina, Brasil e outros países da América do Sul. Entre em contato conosco para orçar sua viagem internacional.",
+                "testimonios_title": "O que dizem nossos clientes",
+                "contacto": "Contate-nos",
+                "contacto_whatsapp": "📞 WhatsApp Oficial:",
+                "contacto_email": "📧 E-mail:",
+                "contacto_ubicacion": "📍 Localização:",
+                "footer_disclaimer": "Serviço profissional de traslado privado no Paraguai. Motoristas certificados • Veículos segurados • Disponível 24/7"
+            }
+        };
+        
+        let currentLang = "es";
+        
+        function setLang(lang) {
+            currentLang = lang;
+            
+            // Actualizar selector de idiomas
+            document.querySelectorAll(".lang-selector a").forEach(a => {
+                a.classList.remove("active");
+            });
+            event.target.classList.add("active");
+            
+            // Actualizar traducciones
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Guardar idioma en localStorage
+            localStorage.setItem("preferredLang", lang);
+        }
+        
+        // Cargar idioma guardado al iniciar
+        window.addEventListener("load", function() {
+            const
